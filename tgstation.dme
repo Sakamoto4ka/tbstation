@@ -4242,6 +4242,7 @@
 #include "code\modules\movespeed\modifiers\mobs.dm"
 #include "code\modules\movespeed\modifiers\reagent.dm"
 #include "code\modules\movespeed\modifiers\status_effects.dm"
+#include "code\modules\massmeta\weapons\nunchaku.dm"
 #include "code\modules\NTNet\relays.dm"
 #include "code\modules\pai\actions.dm"
 #include "code\modules\pai\camera.dm"
