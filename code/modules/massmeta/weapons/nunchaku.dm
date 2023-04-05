@@ -1,13 +1,12 @@
 /obj/item/melee/nunchaku
-	name = "sledgehammer"
+	name = "nunchaku"
 	desc = "Traditional Okinawan martial arts weapon"
-	force = 2
-	icon_state = "sledgehammer0"
-	base_icon_state = "sledgehammer"
-	icon = 'massmeta/icons/obj/sledgehammer.dmi'
-	lefthand_file = 'massmeta/icons/mob/inhands/sledgehammer_lefthand.dmi'
-	righthand_file = 'massmeta/icons/mob/inhands/sledgehammer_righthand.dmi'
-	w_class = WEIGHT_CLASS_HUGE
+	force = 4
+	icon_state = "nunchaku"
+	icon = 'massmeta/icons/obj/nunchaku.dmi'
+	lefthand_file = 'massmeta/icons/mob/inhands/nunchaku_lefthand.dmi'
+	righthand_file = 'massmeta/icons/mob/inhands/nunchaku_righthand.dmi'
+	w_class = WEIGHT_CLASS_BULKY
 	slot_flags = ITEM_SLOT_BELT
 	wound_bonus = -10
 	demolition_mod = 0.25
@@ -17,18 +16,6 @@
 	var/fast_attack_speed = CLICK_CD_MELEE / 2
 
 	var/attack_sound = 'sound/effects/woodhit.ogg'
-
-/obj/item/melee/nunchaku/Initialize(mapload)
-	. = ..()
-	AddComponent(/datum/component/two_handed, \
-		icon_wielded = "[base_icon_state]1", \
-		force_unwielded = 2, \
-		force_wielded = 4, \
-	)
-
-/obj/item/melee/nunchaku/update_icon_state()
-	icon_state = "[base_icon_state]0"
-	return ..()
 
 /obj/item/melee/nunchaku/proc/check_parried(mob/living/carbon/human/human_target, mob/living/user)
 	if(!ishuman(human_target))
@@ -46,7 +33,7 @@
 	if(HAS_TRAIT(user, TRAIT_PACIFISM))
 		return
 	if(check_parried(target, user))
-		return BATON_ATTACK_DONE
+		return
 
 	if((HAS_TRAIT(user, TRAIT_CLUMSY)) && prob(30))
 		user.visible_message(span_danger("[user] accidentally hits [user.p_them()]self with [src]!"), span_userdanger("You accidentally hit yourself with [src]!"))
@@ -65,10 +52,11 @@
 
 	check_parried(target, user)
 
-	if(!HAS_TRAIT(src, TRAIT_WIELDED) || LAZYACCESS(modifiers, RIGHT_CLICK))
-		if(prob(5))
+	if(LAZYACCESS(modifiers, RIGHT_CLICK))
+		if(prob(1))
 			user.Knockdown(1 SECONDS)
-			user.visible_message(span_danger("[user] accidentally hits [user.p_them()]self with [src]!"), span_userdanger("You accidentally hit yourself with [src]!"))
+			user.visible_message(span_danger("[user] accidentally hits [user.p_them()]self with [src]!"), \
+				span_userdanger("You accidentally hit yourself with [src]!"))
 			return
 		..()
 		user.changeNext_move(fast_attack_speed)
@@ -79,5 +67,16 @@
 
 	playsound(get_turf(src), attack_sound, 50, TRUE)
 
-	target.visible_message(span_danger("[user] knocks [target] down with [src]!"), \
-		span_userdanger("[user] knocks you down with [src]!"))
+	target.visible_message(span_danger("[user] knocks [target] with [src]!"), \
+		span_userdanger("[user] knocks you with [src]!"))
+
+/datum/crafting_recipe/nunchaku
+	name = "nunchaku"
+	result = /obj/item/melee/nunchaku
+	reqs = list(
+		/obj/item/restraints/handcuffs/cable = 2,
+		/obj/item/stack/sheet/mineral/wood = 6,
+	)
+	tool_behaviors = list(TOOL_KNIFE)
+	time = 12 SECONDS
+	category = CAT_WEAPON_MELEE
