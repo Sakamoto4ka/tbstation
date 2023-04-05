@@ -314,7 +314,7 @@
 	required_candidates = 1
 	weight = 1
 	cost = 10
-	requirements = list(10,10,10,10,10,10,10,10,10,10)
+	requirements = list(90,80,80,70,60,40,30,20,10,10)
 	minimum_players = 25
 	flags = HIGH_IMPACT_RULESET
 	ruleset_lazy_templates = list(LAZY_TEMPLATE_KEY_WIZARDDEN)
@@ -350,7 +350,7 @@
 	required_candidates = 5
 	weight = 5
 	cost = 7
-	requirements = list(7,7,7,7,7,7,7,7,7,7)
+	requirements = list(90,80,80,70,60,40,30,20,10,10)
 	minimum_round_time = 50 MINUTES
 	minimum_players = 25
 	ruleset_lazy_templates = list(LAZY_TEMPLATE_KEY_NUKIEBASE)
