@@ -315,7 +315,7 @@
 	weight = 1
 	cost = 10
 	requirements = list(10,10,10,10,10,10,10,10,10,10)
-	requirements = REQUIREMENTS_VERY_HIGH_THREAT_NEEDED
+	minimum_players = 25
 	flags = HIGH_IMPACT_RULESET
 	ruleset_lazy_templates = list(LAZY_TEMPLATE_KEY_WIZARDDEN)
 
@@ -352,11 +352,11 @@
 	cost = 7
 	requirements = list(7,7,7,7,7,7,7,7,7,7)
 	minimum_round_time = 50 MINUTES
-	requirements = REQUIREMENTS_VERY_HIGH_THREAT_NEEDED
+	minimum_players = 25
 	ruleset_lazy_templates = list(LAZY_TEMPLATE_KEY_NUKIEBASE)
 	flags = HIGH_IMPACT_RULESET
 
-	var/list/operative_cap = list(2,2,3,3,4,5,5,5,5,5)
+	var/list/operative_cap = list(1,2,2,3,4,5,5,5,5,5)
 	/// The nuke ops team datum.
 	var/datum/team/nuclear/nuke_team
 
