@@ -41,6 +41,7 @@ map heliostation
 endmap
 
 map pubbystation
+	disabled
 endmap
 
 map runtimestation
