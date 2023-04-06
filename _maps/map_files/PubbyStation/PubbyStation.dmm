@@ -8586,13 +8586,6 @@
 "aEd" = (
 /turf/closed/wall,
 /area/station/commons/toilet/restrooms)
-"aEf" = (
-/obj/structure/urinal{
-	pixel_y = 32
-	},
-/obj/effect/landmark/generic_maintenance_landmark,
-/turf/open/floor/iron/freezer,
-/area/station/commons/toilet/restrooms)
 "aEg" = (
 /obj/structure/urinal{
 	pixel_y = 32
@@ -10274,7 +10267,6 @@
 	pixel_x = -12;
 	pixel_y = 2
 	},
-/obj/effect/landmark/generic_maintenance_landmark,
 /obj/machinery/light_switch/directional/west,
 /turf/open/floor/iron/freezer,
 /area/station/commons/toilet/auxiliary)
@@ -11907,7 +11899,6 @@
 /turf/open/floor/wood,
 /area/station/service/bar)
 "aSQ" = (
-/obj/effect/landmark/generic_maintenance_landmark,
 /obj/item/storage/box/beanbag,
 /obj/item/assembly/mousetrap,
 /obj/item/storage/box/mousetraps,
@@ -17015,7 +17006,6 @@
 	c_tag = "Research Division Lobby"
 	},
 /obj/machinery/light/directional/south,
-/obj/machinery/destructive_scanner,
 /turf/open/floor/iron/dark,
 /area/station/hallway/primary/aft)
 "boX" = (
@@ -18342,7 +18332,6 @@
 /turf/open/floor/iron/white,
 /area/station/medical/pharmacy)
 "bup" = (
-/obj/machinery/rnd/destructive_analyzer,
 /obj/effect/turf_decal/delivery,
 /turf/open/floor/iron,
 /area/station/science/research)
@@ -26195,7 +26184,6 @@
 /area/station/maintenance/department/engine)
 "cbT" = (
 /obj/item/shovel,
-/obj/effect/landmark/generic_maintenance_landmark,
 /turf/open/floor/plating,
 /area/station/maintenance/department/engine)
 "cbV" = (
@@ -27224,11 +27212,6 @@
 	},
 /turf/open/floor/iron/showroomfloor,
 /area/station/service/chapel/monastery)
-"cis" = (
-/obj/effect/landmark/generic_maintenance_landmark,
-/obj/machinery/atmospherics/pipe/smart/manifold4w/cyan,
-/turf/open/floor/iron/white,
-/area/station/medical/virology)
 "cit" = (
 /obj/effect/turf_decal/stripes/line,
 /turf/open/floor/engine,
@@ -30107,10 +30090,6 @@
 /obj/machinery/newscaster/directional/east,
 /turf/open/floor/plating,
 /area/station/service/abandoned_gambling_den)
-"cBq" = (
-/obj/effect/landmark/generic_maintenance_landmark,
-/turf/open/floor/plating,
-/area/station/service/abandoned_gambling_den)
 "cBr" = (
 /obj/structure/table/wood/poker,
 /obj/item/toy/cards/deck,
@@ -30415,11 +30394,6 @@
 /obj/machinery/space_heater,
 /turf/open/floor/plating,
 /area/station/maintenance/department/science/central)
-"cKA" = (
-/obj/effect/landmark/generic_maintenance_landmark,
-/obj/effect/turf_decal/tile/purple/half/contrasted,
-/turf/open/floor/iron/white,
-/area/station/science/lab)
 "cKQ" = (
 /turf/open/floor/iron/white,
 /area/station/medical/medbay/central)
@@ -31067,13 +31041,6 @@
 	},
 /obj/structure/table/glass,
 /obj/machinery/newscaster/directional/west,
-/obj/item/experi_scanner{
-	pixel_x = 6
-	},
-/obj/item/experi_scanner,
-/obj/item/experi_scanner{
-	pixel_x = -6
-	},
 /turf/open/floor/iron/dark,
 /area/station/science/research)
 "duQ" = (
@@ -32621,10 +32588,6 @@
 /obj/structure/cable,
 /turf/open/floor/iron,
 /area/station/security/prison/work)
-"eUb" = (
-/obj/effect/landmark/generic_maintenance_landmark,
-/turf/open/floor/iron,
-/area/station/engineering/atmos)
 "eUe" = (
 /obj/machinery/disposal/delivery_chute{
 	dir = 4;
@@ -34976,15 +34939,6 @@
 /obj/effect/landmark/start/hangover,
 /turf/open/floor/iron/dark,
 /area/station/service/chapel/monastery)
-"hae" = (
-/obj/effect/landmark/generic_maintenance_landmark,
-/obj/structure/cable,
-/obj/machinery/atmospherics/pipe/smart/manifold4w/scrubbers/hidden/layer2,
-/obj/machinery/atmospherics/pipe/smart/manifold4w/supply/hidden/layer4{
-	dir = 4
-	},
-/turf/open/floor/iron,
-/area/station/commons/fitness/recreation)
 "ham" = (
 /obj/effect/turf_decal/stripes/line{
 	dir = 8
@@ -42979,15 +42933,6 @@
 	},
 /turf/open/floor/iron/dark,
 /area/station/science/xenobiology)
-"oNY" = (
-/obj/effect/landmark/generic_maintenance_landmark,
-/obj/structure/cable,
-/obj/machinery/atmospherics/pipe/smart/manifold4w/scrubbers/hidden/layer2,
-/obj/machinery/atmospherics/pipe/smart/manifold4w/supply/hidden/layer4{
-	dir = 4
-	},
-/turf/open/floor/plating,
-/area/station/maintenance/department/crew_quarters/dorms)
 "oOo" = (
 /obj/machinery/atmospherics/components/unary/vent_pump/siphon/monitored/nitrogen_output{
 	dir = 1
@@ -44165,9 +44110,6 @@
 	pixel_y = 32
 	},
 /obj/machinery/light/directional/north,
-/obj/machinery/atmospherics/components/binary/tank_compressor{
-	dir = 8
-	},
 /turf/open/floor/iron/dark,
 /area/station/science/ordnance/testlab)
 "pOc" = (
@@ -44418,7 +44360,6 @@
 /area/station/service/library/artgallery)
 "pYj" = (
 /obj/effect/decal/cleanable/dirt,
-/obj/effect/landmark/generic_maintenance_landmark,
 /obj/machinery/atmospherics/components/unary/vent_pump/on/layer4{
 	dir = 8
 	},
@@ -77235,7 +77176,7 @@ bHS
 bEr
 aWG
 stc
-cis
+hdK
 hdK
 ksP
 ggW
@@ -90610,7 +90551,7 @@ bWO
 bTQ
 ksv
 sGc
-eUb
+bWO
 wCz
 mvA
 mkS
@@ -92398,7 +92339,7 @@ pmq
 aqm
 fBp
 eDR
-eUb
+bWO
 bWO
 wCz
 bMX
@@ -92830,7 +92771,7 @@ aaa
 aJc
 wMF
 cBn
-cBq
+fNg
 fNg
 fNg
 iEU
@@ -94120,7 +94061,7 @@ aaa
 aaa
 aaa
 ajy
-oNY
+sFK
 alg
 aaa
 aaa
@@ -95169,7 +95110,7 @@ qkj
 pfF
 aBT
 xkF
-aEf
+aEg
 aGF
 jXJ
 aGF
@@ -95981,7 +95922,7 @@ aap
 uDS
 cCt
 vfp
-cKA
+wlK
 bwa
 bwa
 bzd
@@ -99532,7 +99473,7 @@ sFK
 sFK
 sFK
 asc
-hae
+hju
 lhO
 cgB
 hju
