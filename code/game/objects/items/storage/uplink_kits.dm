@@ -76,7 +76,7 @@
 			new /obj/item/ammo_box/a357(src) // 4tc
 			new /obj/item/ammo_box/a357(src)
 			new /obj/item/storage/belt/holster/chameleon(src) // 1 tc
-			new /obj/item/card/emag/doorjack(src) // 3 tc replaced the emag with the doorjack
+			new /obj/item/card/emag(src) // 6 tc
 			new /obj/item/grenade/c4(src) // 1 tc
 			new /obj/item/clothing/gloves/latex/nitrile(src) // ~1 tc for whole outfit
 			new /obj/item/clothing/mask/gas/clown_hat(src)
@@ -94,7 +94,7 @@
 		if(KIT_MURDER)
 			new /obj/item/melee/energy/sword/saber(src) // 8 tc
 			new /obj/item/clothing/glasses/thermal/syndi(src) // 4 tc
-			new /obj/item/card/emag/doorjack(src) // 3 tc
+			new /obj/item/card/emag(src) // 6 tc
 			new /obj/item/clothing/shoes/chameleon/noslip(src) // 2 tc
 			new /obj/item/encryptionkey/syndicate(src) // 2 tc
 			new /obj/item/grenade/syndieminibomb(src) // 6 tc
@@ -108,8 +108,7 @@
 
 		if(KIT_HACKER) //L-L--LOOK AT YOU, HACKER
 			new /obj/item/ai_module/syndicate(src) // 4 tc
-			new /obj/item/card/emag(src) // 4 tc
-			new /obj/item/card/emag/doorjack(src) // 3 tc
+			new /obj/item/card/emag(src) // 6 tc
 			new /obj/item/encryptionkey/binary(src) // 5 tc
 			new /obj/item/ai_module/toy_ai(src) // ~6 tc
 			new /obj/item/multitool/ai_detect(src) // 1 tc
@@ -122,7 +121,7 @@
 			new /obj/item/sbeacondrop(src) // 10 tc
 			new /obj/item/clothing/suit/space/syndicate/black/red(src)
 			new /obj/item/clothing/head/helmet/space/syndicate/black/red(src)
-			new /obj/item/card/emag(src) // 4 tc
+			new /obj/item/card/emag(src) // 6 tc
 			new /obj/item/storage/toolbox/syndicate(src) // 1 tc
 			new /obj/item/card/id/advanced/mining(src)
 			new /obj/item/stack/spacecash/c10000(src) // this is technically 10 tc but not really
@@ -157,8 +156,9 @@
 			new /obj/item/ammo_box/magazine/m12g(src) // 2 tc
 			new /obj/item/grenade/c4 (src) // 1 tc
 			new /obj/item/grenade/c4 (src) // 1 tc
-			new /obj/item/card/emag(src) // 4 tc
-			new /obj/item/card/emag/doorjack(src) // 3 tc
+			new /obj/item/grenade/c4 (src) // 1 tc
+			new /obj/item/card/emag(src) // 6 tc
+
 
 /obj/item/storage/box/syndicate/bundle_b/PopulateContents()
 	switch (pick_weight(list(
@@ -194,7 +194,7 @@
 			new /obj/item/storage/belt/chameleon(src) // worth some fraction of a tc
 			new /obj/item/chameleon(src) // 7 tc
 			new /obj/item/card/id/advanced/chameleon(src) // 2 tc
-			new /obj/item/card/emag/doorjack(src) // 3 tc
+			new /obj/item/card/emag(src) // 6 tc
 			new /obj/item/book/granter/action/spell/smoke(src) // ninja smoke bomb. 1 tc
 			new /obj/item/clothing/shoes/bhop(src) // mining item, lets you jump at people, at least 2 tc
 
@@ -263,8 +263,7 @@
 /obj/item/storage/toolbox/emergency/old/ancientbundle/ //So the subtype works
 
 /obj/item/storage/toolbox/emergency/old/ancientbundle/PopulateContents()
-	new /obj/item/card/emag(src) // 4 tc
-	new /obj/item/card/emag/doorjack(src) //emag used to do both. 3 tc
+	new /obj/item/card/emag(src) // 6 tc
 	new /obj/item/pen/sleepy(src) // 4 tc
 	new /obj/item/reagent_containers/pill/cyanide(src)
 	new /obj/item/chameleon(src) //its not the original cloaking device, but it will do. 8 tc
