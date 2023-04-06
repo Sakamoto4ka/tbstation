@@ -5,7 +5,7 @@
 	resistance = 1
 	stage_speed = 4 //while the reference material has low speed, this virus will take a good while to completely convert someone
 	transmittable = -1
-	level = 9
+	level = 8
 	severity = 0
 	symptom_delay_min = 10
 	symptom_delay_max = 30
