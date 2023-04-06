@@ -40,6 +40,10 @@ map heliostation
 	disabled
 endmap
 
+map pubbystation
+	disabled
+endmap
+
 map runtimestation
 	disabled
 endmap
