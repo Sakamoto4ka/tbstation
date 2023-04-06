@@ -22,7 +22,7 @@
 	var/charges = 3 //How many charges do we currently have
 	var/max_charges = 3 //How many charges can we hold in total
 	var/charge_time = 1 MINUTES //How long does it take to gain a new charge
-	var/current_cooldown //How long until we gain our next charge
+	var/list/current_cooldown = list() //How long until we gain our next charge
 
 /obj/item/card/emag/Initialize(mapload)
 	. = ..()
@@ -82,29 +82,32 @@
 /obj/item/card/emag/proc/use_charge(mob/user)
 	charges --
 	to_chat(user, span_notice("You use [src]. It now has [charges] charges remaining."))
-	current_cooldown = addtimer(CALLBACK(src, .proc/recharge), charge_time, TIMER_UNIQUE | TIMER_STOPPABLE)
+	current_cooldown.Add(addtimer(CALLBACK(src, PROC_REF(recharge)), charge_time, TIMER_STOPPABLE))
 
 /obj/item/card/emag/proc/can_emag(atom/target, mob/user)
 	for (var/list/subtypelist in consumer_types)
 		if((target.type in subtypelist) && charges <= 0)
-			to_chat(user, span_warning("[src] is out of charges, give it <b>[timeleft(current_cooldown) * 0.1] seconds </b> to recharge!"))
+			to_chat(user, span_warning("[src] is out of charges, give it <b>[timeleft(current_cooldown[1]) * 0.1] seconds </b> to recharge!"))
 			return FALSE
 	return TRUE
 
 /obj/item/card/emag/proc/recharge(mob/user)
 	charges = min(charges+1, max_charges)
 	playsound(src,'sound/machines/twobeep.ogg',10,TRUE, extrarange = SILENCED_SOUND_EXTRARANGE, falloff_distance = 0)
+	current_cooldown.Remove(current_cooldown[1])
 
 /obj/item/card/emag/examine(mob/user)
 	. = ..()
 	. += span_notice("It has [charges] charges remaining.")
-	. += "[span_notice("<b>A small display on the back reads:")]</b>"
-	var/timeleft = current_cooldown != TIMER_ID_NULL ? timeleft(current_cooldown) : 0
+	var/timeleft = timeleft(current_cooldown)
 	var/loadingbar = num2loadingbar(timeleft/charge_time)
 	if(charges == max_charges)
 		. += span_notice("<b> All [charges] charges are ready for use!</b>")
 	else
-		. += span_notice("<b>[loadingbar] : [timeleft*0.1]s </b> Until the next charge.")
+		for (var/i in 1 to length(current_cooldown))
+			. += "[span_notice("<b>A small display on the back reads:")]</b>"
+			. += span_notice("<b>CHARGE #[i]: [loadingbar] ([DisplayTimeText(timeleft[i])])</b>")
+
 
 
 /*
