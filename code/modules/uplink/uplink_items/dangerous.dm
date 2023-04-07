@@ -100,6 +100,14 @@
 	surplus = 50
 	purchasable_from = ~UPLINK_CLOWN_OPS
 
+/datum/uplink_item/dangerous/sydicate_chainsaw
+	name = "Syndicate Ripper"
+	desc = "This infamous chainsaw is a weapon that spreads fear among Nanotrasen pigs. Very loud."
+	item = /obj/item/chainsaw/syndicate_chainsaw
+
+	cost = 13
+	purchasable_from = ~UPLINK_CLOWN_OPS
+
 /datum/uplink_item/dangerous/armstrong
 	name = "Armstrong Style Kit"
 	desc = "A kit with the necessary equipment to become an excellent martial artist, and terrible parent!"
