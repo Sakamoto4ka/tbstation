@@ -17,6 +17,12 @@
 
 	var/attack_sound = 'sound/effects/woodhit.ogg'
 
+/obj/item/melee/nunchaku/Initialize(mapload)
+	. = ..()
+	// Adding an extra break for the sake of presentation
+	if(stamina_damage != 0)
+		offensive_notes = "\nVarious interviewed forces report being able to beat felinids into exhaustion with only [span_warning("[CEILING(100 / stamina_damage, 1)] hit\s!")]"
+
 /obj/item/melee/nunchaku/proc/check_parried(mob/living/carbon/human/human_target, mob/living/user)
 	if(!ishuman(human_target))
 		return
@@ -46,21 +52,16 @@
 		..()
 		return
 
-	user.do_attack_animation(target)
-
 	var/list/modifiers = params2list(params)
 
-	check_parried(target, user)
-
 	if(LAZYACCESS(modifiers, RIGHT_CLICK))
-		if(prob(1))
-			user.Knockdown(1 SECONDS)
-			user.visible_message(span_danger("[user] accidentally hits [user.p_them()]self with [src]!"), \
-				span_userdanger("You accidentally hit yourself with [src]!"))
-			return
 		..()
 		user.changeNext_move(fast_attack_speed)
 		return
+
+	user.do_attack_animation(target)
+
+	check_parried(target, user)
 
 	user.changeNext_move(fast_attack_speed)
 	target.apply_damage(stamina_damage, STAMINA)
