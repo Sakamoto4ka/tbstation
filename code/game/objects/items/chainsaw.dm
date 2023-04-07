@@ -100,7 +100,7 @@
 	lefthand_file = 'massmeta/icons/mob/inhands/ripper_lefthand.dmi'
 	righthand_file = 'massmeta/icons/mob/inhands/ripper_righthand.dmi'
 	force_on = 34
-	armour_penetration = 50
+	armour_penetration = 100
 
 /obj/item/chainsaw/syndicate_chainsaw/attack_self(mob/user)
 	on = !on
