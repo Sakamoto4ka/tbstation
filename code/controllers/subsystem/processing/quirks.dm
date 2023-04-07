@@ -23,12 +23,12 @@ PROCESSING_SUBSYSTEM_DEF(quirks)
 		list("Ageusia", "Vegetarian", "Deviant Tastes", "Gamer"),
 		list("Ananas Affinity", "Ananas Aversion", "Gamer"),
 		list("Alcohol Tolerance", "Light Drinker"),
-		list("Clown Enjoyer", "Mime Fan", "Pride Pin"),
+		list("Clown Enjoyer", "Mime Fan", "Pride Pin"), 
 		list("Bad Touch", "Friendly"),
 		list("Extrovert", "Introvert"),
-		list("Prosthetic Limb", "Quadruple Amputee", "Body Purist"),
-		list("Quadruple Amputee", "Paraplegic"),
-		list("Quadruple Amputee", "Frail"),
+		list("Prosthetic Limb", "Quadruple Amputee", "Body Purist", "Augmented"),
+		list("Quadruple Amputee", "Paraplegic", "Augmented"),
+		list("Quadruple Amputee", "Frail", "Augmented"),
 	)
 
 /datum/controller/subsystem/processing/quirks/Initialize()
@@ -202,5 +202,6 @@ PROCESSING_SUBSYSTEM_DEF(quirks)
 
 	return new_quirks
 
+#undef EXP_ASSIGN_WAYFINDER
 #undef RANDOM_QUIRK_BONUS
 #undef MINIMUM_RANDOM_QUIRKS

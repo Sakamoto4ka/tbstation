@@ -479,6 +479,20 @@
 	admin_notes = "WARNING: This shuttle is designed to crash into the station. It has turrets, similar to the raven."
 	credit_cost = CARGO_CRATE_VALUE * 70
 
+/datum/map_template/shuttle/emergency/tranquility
+	suffix = "tranquility"
+	name = "The Tranquility Relocation Shuttle"
+	description = "A large shuttle, covered in flora and comfortable resting areas. The perfect way to end a peaceful shift"
+	admin_notes = "it's pretty big, and comfy. Be careful when placing it down!"
+	credit_cost = CARGO_CRATE_VALUE * 25
+
+/datum/map_template/shuttle/emergency/ragecage
+	suffix = "ragecage"
+	name = "Rage-Cage Victimizing Evacuation System"
+	description = "Ever wanted to beat someone up while getting beat up yourself? Introducing the RVES, a shuttle whose interior is mostly taken up by its brutal ragecage."
+	admin_notes = "Shuttle console is in the middle of the ragecage, contains bats and other makeshift weapons and electrified grilles. Does not have a brig."
+	credit_cost = CARGO_CRATE_VALUE * 18
+
 /datum/map_template/shuttle/ferry/base
 	suffix = "base"
 	name = "transport ferry"

@@ -1,13 +1,9 @@
-// File ordered based on progression
-
 /datum/uplink_category/device_tools
 	name = "Misc. Gadgets"
 	weight = 3
 
 /datum/uplink_item/device_tools
 	category = /datum/uplink_category/device_tools
-
-// No progression cost
 
 /datum/uplink_item/device_tools/soap
 	name = "Syndicate Soap"
@@ -92,13 +88,6 @@
 	desc = "A robust seven-slot set of webbing that is capable of holding all manner of tactical equipment."
 	item = /obj/item/storage/belt/military
 	cost = 1
-
-/datum/uplink_item/device_tools/doorjack
-	name = "Airlock Authentication Override Card"
-	desc = "A specialized cryptographic sequencer specifically designed to override station airlock access codes. \
-			After hacking a certain number of airlocks, the device will require some time to recharge."
-	item = /obj/item/card/emag/doorjack
-	cost = 3
 
 /datum/uplink_item/device_tools/fakenucleardisk
 	name = "Decoy Nuclear Authentication Disk"
@@ -190,14 +179,12 @@
 	surplus = 75
 	restricted = TRUE
 
-// Low progression cost
-
 /datum/uplink_item/device_tools/emag
 	name = "Cryptographic Sequencer"
 	desc = "The cryptographic sequencer, electromagnetic card, or emag, is a small card that unlocks hidden functions \
-			in electronic devices, subverts intended functions, and easily breaks security mechanisms. Cannot be used to open airlocks."
+			in electronic devices, subverts intended functions, and easily breaks security mechanisms, including airlocks."
 	item = /obj/item/card/emag
-	cost = 4
+	cost = 6
 
 /datum/uplink_item/device_tools/stimpack
 	name = "Stimpack"
@@ -213,8 +200,6 @@
 			item that was taped will embed when thrown at people. Taping people's mouthes with it will hurt them if pulled off by someone else."
 	item = /obj/item/stack/sticky_tape/pointy/super
 	cost = 1
-
-// Medium progression cost
 
 /datum/uplink_item/device_tools/hacked_module
 	name = "Hacked AI Law Upload Module"

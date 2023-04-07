@@ -38,7 +38,6 @@
 		"conveyor_belt",
 		"conveyor_switch",
 		"custom_vendor_refill",
-		"design_disk",
 		"destructive_analyzer",
 		"destructive_scanner",
 		"desttagger",
@@ -1250,6 +1249,7 @@
 		"cybernetic_liver_tier2",
 		"cybernetic_lungs_tier2",
 		"cybernetic_stomach_tier2",
+		"cybernetic_tongue",
 	)
 	research_costs = list(TECHWEB_POINT_TYPE_GENERIC = 1000)
 
@@ -1324,8 +1324,10 @@
 	design_ids = list(
 		"ci-antidrop",
 		"ci-antistun",
+		"ci-antisleep",
 		"ci-thermals",
 		"ci-thrusters",
+		"ci-nv",
 		"ci-xray",
 	)
 	research_costs = list(TECHWEB_POINT_TYPE_GENERIC = 2500)
@@ -2131,6 +2133,7 @@
 		"rapidsyringe",
 		"suppressor",
 		"super_pointy_tape",
+		"ci-mantis",
 	)
 	research_costs = list(TECHWEB_POINT_TYPE_GENERIC = 10000)
 	hidden = TRUE
