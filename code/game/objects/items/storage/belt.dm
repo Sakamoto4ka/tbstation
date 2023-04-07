@@ -525,6 +525,13 @@
 	for(var/i in 1 to 6)
 		new /obj/item/soulstone/anybody/chaplain(src)
 
+/obj/item/storage/belt/cummerbund
+	name = "cummerbund"
+	desc = "A pleated sash that pairs well with a suit jacket."
+	icon_state = "cummerbund"
+	inhand_icon_state = null
+	worn_icon_state = "cummerbund"
+
 /obj/item/storage/belt/champion
 	name = "championship belt"
 	desc = "Proves to the world that you are the strongest!"
@@ -822,13 +829,6 @@
 	name = "yellow fannypack"
 	icon_state = "fannypack_yellow"
 	worn_icon_state = "fannypack_yellow"
-
-/obj/item/storage/belt/fannypack/cummerbund
-	name = "cummerbund"
-	desc = "A pleated sash that pairs well with a suit jacket."
-	icon_state = "cummerbund"
-	inhand_icon_state = null
-	worn_icon_state = "cummerbund"
 
 /obj/item/storage/belt/sabre
 	name = "sabre sheath"
