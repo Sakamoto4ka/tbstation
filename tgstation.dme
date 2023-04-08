@@ -3730,6 +3730,7 @@
 #include "code\modules\mapping\space_management\space_transition.dm"
 #include "code\modules\mapping\space_management\traits.dm"
 #include "code\modules\mapping\space_management\zlevel_manager.dm"
+#include "code\modules\massmeta\weapons\nunchaku.dm"
 #include "code\modules\meteors\meteor_changeling.dm"
 #include "code\modules\meteors\meteor_dark_matteor.dm"
 #include "code\modules\meteors\meteor_spawning.dm"
