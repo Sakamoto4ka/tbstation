@@ -101,7 +101,7 @@
 		. += "[span_notice("<b>A small display on the back reads:")]</b>"
 		for (var/i in 1 to length(current_cooldown))
 			timeleft = timeleft(current_cooldowns[i])
-			. += span_notice("<b>CHARGE #[i]: [loadingbar] ([DisplayTimeText(timeleft[i])])</b>")
+			. += span_notice("<b>CHARGE #[i]: [loadingbar] ([DisplayTimeText(timeleft)])</b>")
 
 
 
