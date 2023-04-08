@@ -14398,8 +14398,8 @@
 /turf/open/floor/iron/dark,
 /area/station/service/chapel)
 "epH" = (
-/obj/effect/turf_decal/stripes/line,
-/turf/open/floor/iron,
+/obj/machinery/nanite_programmer,
+/turf/open/floor/mineral/plastitanium,
 /area/station/science/explab)
 "epX" = (
 /obj/structure/table/wood,
@@ -18920,10 +18920,9 @@
 /turf/open/floor/iron,
 /area/station/engineering/storage_shared)
 "fKh" = (
-/obj/effect/decal/cleanable/dirt,
-/obj/item/toy/beach_ball/holoball,
-/turf/open/floor/iron,
-/area/station/security/prison/workout)
+/obj/machinery/nanite_program_hub,
+/turf/open/floor/mineral/plastitanium,
+/area/station/science/explab)
 "fKi" = (
 /obj/effect/turf_decal/trimline/blue/filled/line,
 /obj/structure/bed/roller,
@@ -23663,7 +23662,6 @@
 /turf/open/floor/iron/white,
 /area/mine/living_quarters)
 "hjp" = (
-/obj/effect/turf_decal/stripes/corner,
 /obj/machinery/camera/directional/south{
 	c_tag = "Research Division Testing Lab";
 	network = list("ss13","rd")
@@ -30210,9 +30208,7 @@
 /turf/open/floor/iron,
 /area/station/science/xenobiology)
 "jkH" = (
-/obj/structure/training_machine,
-/obj/effect/landmark/blobstart,
-/turf/open/floor/engine,
+/turf/open/floor/mineral/plastitanium,
 /area/station/science/explab)
 "jkQ" = (
 /obj/machinery/requests_console/directional/south{
@@ -41047,9 +41043,6 @@
 /turf/open/floor/iron/dark,
 /area/station/science/ordnance)
 "mHv" = (
-/obj/structure/holohoop{
-	dir = 4
-	},
 /obj/effect/decal/cleanable/dirt,
 /obj/machinery/light/warm/directional/west,
 /turf/open/floor/iron,
@@ -55583,10 +55576,8 @@
 /turf/open/floor/iron,
 /area/station/hallway/primary/central)
 "rck" = (
-/obj/effect/turf_decal/stripes/line{
-	dir = 6
-	},
-/turf/open/floor/iron,
+/obj/machinery/computer/nanite_cloud_controller,
+/turf/open/floor/mineral/plastitanium,
 /area/station/science/explab)
 "rcq" = (
 /obj/structure/cable,
@@ -56193,7 +56184,7 @@
 "rnu" = (
 /obj/machinery/light/small/directional/east,
 /obj/structure/sign/warning/secure_area/directional/east,
-/turf/open/floor/engine,
+/turf/open/floor/mineral/plastitanium,
 /area/station/science/explab)
 "rnQ" = (
 /obj/effect/spawner/structure/window/reinforced,
@@ -56769,7 +56760,6 @@
 /turf/open/floor/wood,
 /area/station/service/library)
 "rzg" = (
-/turf/open/genturf/alternative,
 /area/icemoon/underground/unexplored/rivers)
 "rzj" = (
 /obj/structure/table,
@@ -63307,7 +63297,7 @@
 "tBP" = (
 /obj/machinery/light/small/directional/west,
 /obj/structure/sign/warning/secure_area/directional/west,
-/turf/open/floor/engine,
+/turf/open/floor/mineral/plastitanium,
 /area/station/science/explab)
 "tBW" = (
 /obj/structure/railing{
@@ -65099,7 +65089,6 @@
 /turf/open/floor/iron,
 /area/station/hallway/primary/starboard)
 "udC" = (
-/turf/open/genturf/alternative,
 /area/icemoon/underground/unexplored/rivers/deep/shoreline)
 "udE" = (
 /obj/effect/spawner/random/vending/snackvend,
@@ -74644,7 +74633,6 @@
 /turf/open/misc/asteroid/snow/icemoon,
 /area/icemoon/surface/outdoors/nospawn)
 "wXw" = (
-/turf/open/genturf/alternative,
 /area/icemoon/surface/outdoors/noruins)
 "wXW" = (
 /obj/structure/sign/warning/gas_mask/directional/south,
@@ -78572,6 +78560,13 @@
 /obj/effect/spawner/random/maintenance/two,
 /turf/open/floor/plating,
 /area/station/maintenance/port/aft)
+"yjz" = (
+/obj/structure/table/glass,
+/obj/item/nanite_scanner,
+/obj/item/nanite_remote,
+/obj/item/storage/box/disks_nanite,
+/turf/open/floor/mineral/plastitanium,
+/area/station/science/explab)
 "yjA" = (
 /obj/structure/cable,
 /obj/effect/spawner/structure/window/reinforced,
@@ -107850,7 +107845,7 @@ ghx
 ghx
 dcw
 fGI
-fKh
+fGI
 nks
 cfh
 nLW
@@ -257524,12 +257519,12 @@ nsZ
 geg
 eVY
 ihu
-epH
-rDZ
-rDZ
+yeC
+jkH
+jkH
 tBP
-rDZ
-rDZ
+fKh
+epH
 bgx
 tgq
 lXi
@@ -257781,11 +257776,11 @@ nsZ
 mko
 oZn
 sFj
-rck
-rDZ
-rDZ
-rDZ
-rDZ
+yeC
+jkH
+jkH
+jkH
+jkH
 jkH
 bgx
 bFq
@@ -258039,11 +258034,11 @@ ukf
 cMy
 trb
 sXC
-rDZ
-rDZ
+jkH
+jkH
 rnu
-rDZ
-rDZ
+yjz
+rck
 bgx
 rPe
 lXi
