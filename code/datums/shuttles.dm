@@ -366,6 +366,12 @@
 	credit_cost = CARGO_CRATE_VALUE * 4
 	description = "For when you're not quite ready to say goodbye to your home station. May cause damage to smaller stations."
 
+/datum/map_template/shuttle/emergency/cps
+	suffix = "cps"
+	name = "XXL Limitless Shuttle"
+	credit_cost = CARGO_CRATE_VALUE * 30
+	description = "We found this stray shuttle drifting powerless and depressurized in some mothic sector, so we just fixed some systems, refilled gas storage and welded NT cockpit part to it. Important note: try to not release plasma at least for first five minutes."
+
 /datum/map_template/shuttle/emergency/cere
 	suffix = "cere"
 	name = "Cere Station Emergency Shuttle"
