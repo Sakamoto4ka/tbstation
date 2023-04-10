@@ -2543,7 +2543,6 @@
 /turf/open/floor/iron,
 /area/station/engineering/atmos/storage/gas)
 "aSB" = (
-/obj/machinery/atmospherics/components/unary/portables_connector/visible,
 /obj/effect/turf_decal/box,
 /turf/open/floor/iron/dark,
 /area/station/science/ordnance/office)
@@ -11170,9 +11169,6 @@
 /turf/closed/wall/r_wall,
 /area/station/engineering/transit_tube)
 "duE" = (
-/obj/machinery/atmospherics/components/binary/tank_compressor{
-	dir = 4
-	},
 /obj/effect/turf_decal/delivery,
 /turf/open/floor/iron/dark,
 /area/station/science/ordnance/office)
@@ -15071,7 +15067,6 @@
 /area/station/security/brig/upper)
 "eKl" = (
 /obj/effect/turf_decal/stripes/box,
-/obj/machinery/destructive_scanner,
 /turf/open/floor/iron/textured_large,
 /area/station/hallway/primary/starboard)
 "eKB" = (
@@ -27469,12 +27464,9 @@
 /turf/open/floor/iron/dark,
 /area/station/command/heads_quarters/cmo)
 "iOv" = (
-/obj/machinery/atmospherics/components/unary/portables_connector/visible{
-	dir = 8
-	},
-/obj/effect/turf_decal/box,
-/turf/open/floor/iron/dark,
-/area/station/science/ordnance/office)
+/obj/machinery/nanite_chamber,
+/turf/open/floor/mineral/plastitanium,
+/area/station/science/explab)
 "iOw" = (
 /obj/effect/decal/cleanable/dirt,
 /turf/open/floor/iron,
@@ -28884,9 +28876,7 @@
 /turf/open/floor/iron,
 /area/station/science/xenobiology)
 "jkH" = (
-/obj/structure/training_machine,
-/obj/effect/landmark/blobstart,
-/turf/open/floor/engine,
+/turf/open/floor/mineral/plastitanium,
 /area/station/science/explab)
 "jkQ" = (
 /obj/machinery/requests_console/directional/south{
@@ -52584,6 +52574,10 @@
 	},
 /turf/open/floor/iron/dark/smooth_large,
 /area/station/medical/treatment_center)
+"qLq" = (
+/obj/machinery/nanite_programmer,
+/turf/open/floor/mineral/plastitanium,
+/area/station/science/explab)
 "qLt" = (
 /obj/effect/landmark/start/hangover,
 /obj/machinery/atmospherics/components/unary/vent_pump/on/layer4,
@@ -54294,7 +54288,7 @@
 "rnu" = (
 /obj/machinery/light/small/directional/east,
 /obj/structure/sign/warning/secure_area/directional/east,
-/turf/open/floor/engine,
+/turf/open/floor/mineral/plastitanium,
 /area/station/science/explab)
 "rnx" = (
 /obj/structure/cable,
@@ -57709,6 +57703,10 @@
 	},
 /turf/open/floor/iron,
 /area/station/hallway/secondary/entry)
+"stf" = (
+/obj/machinery/nanite_program_hub,
+/turf/open/floor/mineral/plastitanium,
+/area/station/science/explab)
 "sto" = (
 /obj/effect/turf_decal/stripes/line{
 	dir = 8
@@ -59590,6 +59588,7 @@
 	req_access = list("xenobiology")
 	},
 /obj/effect/decal/cleanable/dirt,
+/obj/item/storage/box/disks_nanite,
 /turf/open/floor/iron/dark,
 /area/station/science/explab)
 "sXK" = (
@@ -61233,7 +61232,8 @@
 "tBP" = (
 /obj/machinery/light/small/directional/west,
 /obj/structure/sign/warning/secure_area/directional/west,
-/turf/open/floor/engine,
+/obj/machinery/computer/nanite_cloud_controller,
+/turf/open/floor/mineral/plastitanium,
 /area/station/science/explab)
 "tBR" = (
 /obj/machinery/atmospherics/pipe/smart/manifold4w/scrubbers/hidden/layer2,
@@ -61749,9 +61749,6 @@
 	},
 /area/mine/living_quarters)
 "tHT" = (
-/obj/machinery/atmospherics/components/trinary/filter{
-	dir = 8
-	},
 /obj/effect/turf_decal/delivery,
 /obj/machinery/camera/directional/south{
 	c_tag = "Ordnance Upper Mix Lab";
@@ -61872,13 +61869,6 @@
 /area/station/maintenance/department/chapel)
 "tJG" = (
 /obj/machinery/firealarm/directional/south,
-/obj/item/experi_scanner{
-	pixel_x = 4
-	},
-/obj/item/experi_scanner,
-/obj/item/experi_scanner{
-	pixel_x = -4
-	},
 /obj/structure/table/glass,
 /turf/open/floor/iron/white/side{
 	dir = 1
@@ -63410,9 +63400,6 @@
 /turf/closed/wall/r_wall,
 /area/station/ai_monitored/command/nuke_storage)
 "uiN" = (
-/obj/machinery/atmospherics/components/unary/portables_connector/visible{
-	dir = 4
-	},
 /obj/effect/turf_decal/box/red,
 /turf/open/floor/iron/dark,
 /area/station/science/ordnance/office)
@@ -72017,6 +72004,12 @@
 	},
 /turf/open/floor/iron,
 /area/station/command/bridge)
+"wUK" = (
+/obj/machinery/computer/nanite_chamber_control{
+	dir = 4
+	},
+/turf/open/floor/mineral/plastitanium,
+/area/station/science/explab)
 "wUL" = (
 /obj/machinery/door/airlock/mining/glass{
 	name = "Cargo Warehouse"
@@ -255029,11 +255022,11 @@ geg
 eVY
 ihu
 epH
-rDZ
-rDZ
+wUK
+iOv
 tBP
-rDZ
-rDZ
+stf
+qLq
 bgx
 tgq
 lXi
@@ -255286,10 +255279,10 @@ mko
 oZn
 sFj
 rck
-rDZ
-rDZ
-rDZ
-rDZ
+jkH
+jkH
+jkH
+jkH
 jkH
 bgx
 bFq
@@ -255543,11 +255536,11 @@ ukf
 cMy
 trb
 sXC
-rDZ
-rDZ
+jkH
+jkH
 rnu
-rDZ
-rDZ
+jkH
+jkH
 bgx
 rPe
 lXi
@@ -255794,7 +255787,7 @@ awa
 awa
 xUk
 sqt
-iOv
+aSB
 nsZ
 pee
 hjE
