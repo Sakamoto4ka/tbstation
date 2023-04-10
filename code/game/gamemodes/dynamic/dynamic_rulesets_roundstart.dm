@@ -223,7 +223,7 @@
 	weight = 3
 	cost = 10
 	scaling_cost = 9
-	requirements = list(40,30,30,20,20,15,15,15,10,10)
+	requirements = list(101,101,60,30,20,15,15,15,10,10)
 	antag_cap = list("denominator" = 24)
 
 
