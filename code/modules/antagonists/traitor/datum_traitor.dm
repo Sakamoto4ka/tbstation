@@ -38,6 +38,8 @@
 	/// The uplink handler that this traitor belongs to.
 	var/datum/uplink_handler/uplink_handler
 
+	var/datum/contractor_hub/contractor_hub
+
 	var/uplink_sale_count = 3
 
 	///the final objective the traitor has to accomplish, be it escaping, hijacking, or just martyrdom.
@@ -71,7 +73,7 @@
 
 			if(uplink_handler.progression_points < SStraitor.current_global_progression)
 				uplink_handler.progression_points = SStraitor.current_global_progression * SStraitor.newjoin_progression_coeff
-				
+
 		var/list/uplink_items = list()
 		for(var/datum/uplink_item/item as anything in SStraitor.uplink_items)
 			if(item.item && !item.cant_discount && (item.purchasable_from & uplink_handler.uplink_flag) && item.cost > 1)
@@ -335,6 +337,9 @@
 
 	var/special_role_text = lowertext(name)
 
+	if(contractor_hub)
+		result += contractor_round_end()
+
 	if(traitor_won)
 		result += span_greentext("The [special_role_text] was successful!")
 	else
@@ -351,6 +356,42 @@
 					<b>The code responses were:</b> [span_redtext("[responses]")]<br>"
 
 	return message
+
+/// Proc detailing contract kit buys/completed contracts/additional info
+/datum/antagonist/traitor/proc/contractor_round_end()
+	var/result = ""
+	var/total_spent_rep = 0
+
+	var/completed_contracts = contractor_hub.contracts_completed
+	var/tc_total = contractor_hub.contract_TC_payed_out + contractor_hub.contract_TC_to_redeem
+
+	var/contractor_item_icons = "" // Icons of purchases
+	var/contractor_support_unit = "" // Set if they had a support unit - and shows appended to their contracts completed
+
+	/// Get all the icons/total cost for all our items bought
+	for (var/datum/contractor_item/contractor_purchase in contractor_hub.purchased_items)
+		contractor_item_icons += "<span class='tooltip_container'>\[ <i class=\"fas [contractor_purchase.item_icon]\"></i><span class='tooltip_hover'><b>[contractor_purchase.name] - [contractor_purchase.cost] Rep</b><br><br>[contractor_purchase.desc]</span> \]</span>"
+
+		total_spent_rep += contractor_purchase.cost
+
+		/// Special case for reinforcements, we want to show their ckey and name on round end.
+		if (istype(contractor_purchase, /datum/contractor_item/contractor_partner))
+			var/datum/contractor_item/contractor_partner/partner = contractor_purchase
+			contractor_support_unit += "<br><b>[partner.partner_mind.key]</b> played <b>[partner.partner_mind.current.name]</b>, their contractor support unit."
+
+	if (contractor_hub.purchased_items.len)
+		result += "<br>(used [total_spent_rep] Rep) "
+		result += contractor_item_icons
+	result += "<br>"
+	if (completed_contracts > 0)
+		var/pluralCheck = "contract"
+		if (completed_contracts > 1)
+			pluralCheck = "contracts"
+
+		result += "Completed [span_greentext("[completed_contracts]")] [pluralCheck] for a total of \
+					[span_greentext("[tc_total] TC")]![contractor_support_unit]<br>"
+
+	return result
 
 /datum/outfit/traitor
 	name = "Traitor (Preview only)"
