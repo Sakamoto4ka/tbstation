@@ -416,7 +416,7 @@
 /turf/open/floor/sepia,
 /area/deathmatch)
 "cp" = (
-/obj/structure/window,
+/obj/structure/window/spawner/directional/south,
 /turf/open/floor/sepia,
 /area/deathmatch)
 "cq" = (
@@ -430,8 +430,7 @@
 /turf/open/floor/sepia,
 /area/deathmatch)
 "ct" = (
-/obj/structure/window{
-	dir = 8;
+/obj/structure/window/spawner/directional/west{
 	icon_state = "window"
 	},
 /obj/item/lighter,
