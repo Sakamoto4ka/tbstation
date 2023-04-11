@@ -904,7 +904,8 @@
 	required_candidates = 1
 	weight = 5
 	cost = 10
-	requirements = list(10,10,10,10,10,10,10,10,10,10)
+	requirements = list(101,101,50,10,10,10,10,10,10,10)
+	minimum_players = 15
 	repeatable = FALSE
 
 /datum/dynamic_ruleset/midround/bloodsucker/trim_candidates()
