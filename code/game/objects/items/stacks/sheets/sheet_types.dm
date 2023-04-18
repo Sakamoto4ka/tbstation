@@ -675,10 +675,10 @@ GLOBAL_LIST_INIT(cardboard_recipes, list ( \
  */
 
 GLOBAL_LIST_INIT(bronze_recipes, list ( \
-	new/datum/stack_recipe("wall gear", /obj/structure/girder/bronze, 2, time = 20, one_per_turf = TRUE, on_floor = TRUE), \
+	new/datum/stack_recipe("wall gear", /obj/structure/girder/bronze, 2, time = 20, one_per_turf = TRUE, on_solid_ground  = TRUE), \
 	null,
-	new/datum/stack_recipe("латунный шлюз", /obj/machinery/door/airlock/bronze, 4, time = 50, one_per_turf = TRUE, on_floor = TRUE), \
-	new/datum/stack_recipe("латунный шлюз с щелью", /obj/machinery/door/airlock/bronze/seethru, 4, time = 50, one_per_turf = TRUE, on_floor = TRUE), \
+	new/datum/stack_recipe("латунный шлюз", /obj/machinery/door/airlock/bronze, 4, time = 50, one_per_turf = TRUE, on_solid_ground  = TRUE), \
+	new/datum/stack_recipe("латунный шлюз с щелью", /obj/machinery/door/airlock/bronze/seethru, 4, time = 50, one_per_turf = TRUE, on_solid_ground  = TRUE), \
 	new/datum/stack_recipe("directional bronze window", /obj/structure/window/bronze/unanchored, time = 0, on_solid_ground = TRUE, check_direction = TRUE, category = CAT_WINDOWS), \
 	new/datum/stack_recipe("fulltile bronze window", /obj/structure/window/bronze/fulltile/unanchored, 2, time = 0, on_solid_ground = TRUE, is_fulltile = TRUE, category = CAT_WINDOWS), \
 	new/datum/stack_recipe("pinion airlock assembly", /obj/structure/door_assembly/door_assembly_bronze, 4, time = 5 SECONDS, one_per_turf = TRUE, on_solid_ground = TRUE, category = CAT_DOORS), \
@@ -688,20 +688,20 @@ GLOBAL_LIST_INIT(bronze_recipes, list ( \
 	new/datum/stack_recipe("bronze suit", /obj/item/clothing/suit/costume/bronze, check_density = FALSE, category = CAT_CLOTHING), \
 	new/datum/stack_recipe("bronze boots", /obj/item/clothing/shoes/bronze, check_density = FALSE, category = CAT_CLOTHING), \
 	null,
-	new/datum/stack_recipe("латунный стул", /obj/structure/chair/bronze, 1, time = 0, one_per_turf = TRUE, on_floor = TRUE), \
-	new/datum/stack_recipe("огромная шестерня", /obj/structure/destructible/clockwork/wall_gear, 2, time = 20, one_per_turf = TRUE, on_floor = TRUE), \
-	new/datum/stack_recipe("латунная решётка", /obj/structure/grille/ratvar, 2, time=20, one_per_turf = TRUE, on_floor = TRUE), \
+	new/datum/stack_recipe("латунный стул", /obj/structure/chair/bronze, 1, time = 0, one_per_turf = TRUE, on_solid_ground  = TRUE), \
+	new/datum/stack_recipe("огромная шестерня", /obj/structure/destructible/clockwork/wall_gear, 2, time = 20, one_per_turf = TRUE, on_solid_ground  = TRUE), \
+	new/datum/stack_recipe("латунная решётка", /obj/structure/grille/ratvar, 2, time=20, one_per_turf = TRUE, on_solid_ground  = TRUE), \
 	null, \
-	new/datum/stack_recipe("латунное окно", /obj/machinery/door/window/clockwork, 5, time=40, on_floor = TRUE, window_checks=TRUE), \
+	new/datum/stack_recipe("латунное окно", /obj/machinery/door/window/clockwork, 5, time=40, on_solid_ground  = TRUE), \
 	null, \
-	new/datum/stack_recipe("рычаг", /obj/item/wallframe/clocktrap/lever, 1, time=40, one_per_turf = FALSE, on_floor = FALSE), \
-	new/datum/stack_recipe("таймер", /obj/item/wallframe/clocktrap/delay, 1, time=40, one_per_turf = FALSE, on_floor = FALSE), \
-	new/datum/stack_recipe("нажимная плита", /obj/structure/destructible/clockwork/trap/pressure_sensor, 4, time=40, one_per_turf = TRUE, on_floor = TRUE), \
+	new/datum/stack_recipe("рычаг", /obj/item/wallframe/clocktrap/lever, 1, time=40, one_per_turf = FALSE, on_solid_ground  = FALSE), \
+	new/datum/stack_recipe("таймер", /obj/item/wallframe/clocktrap/delay, 1, time=40, one_per_turf = FALSE, on_solid_ground  = FALSE), \
+	new/datum/stack_recipe("нажимная плита", /obj/structure/destructible/clockwork/trap/pressure_sensor, 4, time=40, one_per_turf = TRUE, on_solid_ground  = TRUE), \
 	null, \
-	new/datum/stack_recipe("латунный шампур", /obj/structure/destructible/clockwork/trap/skewer, 12, time=40, one_per_turf = TRUE, on_floor = TRUE), \
-	new/datum/stack_recipe("латунный трамплин", /obj/structure/destructible/clockwork/trap/flipper, 10, time=40, one_per_turf = TRUE, on_floor = TRUE), \
-	new/datum/stack_recipe("pinion airlock assembly", /obj/structure/door_assembly/door_assembly_bronze, 4, time = 50, one_per_turf = TRUE, on_floor = TRUE), \
-	new/datum/stack_recipe("bronze pinion airlock assembly", /obj/structure/door_assembly/door_assembly_bronze/seethru, 4, time = 50, one_per_turf = TRUE, on_floor = TRUE), \
+	new/datum/stack_recipe("латунный шампур", /obj/structure/destructible/clockwork/trap/skewer, 12, time=40, one_per_turf = TRUE, on_solid_ground  = TRUE), \
+	new/datum/stack_recipe("латунный трамплин", /obj/structure/destructible/clockwork/trap/flipper, 10, time=40, one_per_turf = TRUE, on_solid_ground  = TRUE), \
+	new/datum/stack_recipe("pinion airlock assembly", /obj/structure/door_assembly/door_assembly_bronze, 4, time = 50, one_per_turf = TRUE, on_solid_ground  = TRUE), \
+	new/datum/stack_recipe("bronze pinion airlock assembly", /obj/structure/door_assembly/door_assembly_bronze/seethru, 4, time = 50, one_per_turf = TRUE, on_solid_ground  = TRUE), \
 ))
 
 /obj/item/stack/sheet/bronze

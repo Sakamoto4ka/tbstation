@@ -41,8 +41,8 @@
 	base_icon_state = "clockwork_wall-0"
 	icon = 'icons/turf/walls/clockwork_wall.dmi'
 	smoothing_flags = SMOOTH_CORNERS
-	smoothing_groups = list(SMOOTH_GROUP_CLOSED_TURFS, SMOOTH_GROUP_WALLS, SMOOTH_GROUP_SILVER_WALLS)
-	canSmoothWith = list(SMOOTH_GROUP_SILVER_WALLS)
+	smoothing_groups = SMOOTH_GROUP_CLOSED_TURFS + SMOOTH_GROUP_WALLS + SMOOTH_GROUP_SILVER_WALLS
+	canSmoothWith = SMOOTH_GROUP_SILVER_WALLS
 	hardness = 10
 	slicing_duration = 80
 	sheet_type = /obj/item/stack/tile/bronze
@@ -298,8 +298,8 @@
 	name = "механический мостик"
 	icon_state = "catwalk"
 	icon = 'icons/obj/smooth_structures/catwalk_clockwork.dmi'
-	smoothing_groups = list(SMOOTH_GROUP_LATTICE, SMOOTH_GROUP_CATWALK, SMOOTH_GROUP_OPEN_FLOOR)
-	canSmoothWith = list(SMOOTH_GROUP_CATWALK)
+	smoothing_groups = SMOOTH_GROUP_LATTICE + SMOOTH_GROUP_CATWALK + SMOOTH_GROUP_OPEN_FLOOR
+	canSmoothWith = SMOOTH_GROUP_CATWALK
 	smoothing_flags = SMOOTH_CORNERS
 
 /obj/structure/lattice/catwalk/clockwork/Initialize(mapload)
@@ -549,8 +549,8 @@
 	base_icon_state = "clockwork_window"
 	icon_state = "clockwork_window-0"
 	smoothing_flags = SMOOTH_BITMASK
-	smoothing_groups = list(SMOOTH_GROUP_WINDOW_FULLTILE)
-	canSmoothWith = list(SMOOTH_GROUP_WINDOW_FULLTILE)
+	smoothing_groups = SMOOTH_GROUP_WINDOW_FULLTILE_BRONZE + SMOOTH_GROUP_WINDOW_FULLTILE
+	canSmoothWith = SMOOTH_GROUP_WINDOW_FULLTILE_BRONZE
 	fulltile = TRUE
 	flags_1 = PREVENT_CLICK_UNDER_1
 	max_integrity = 120
