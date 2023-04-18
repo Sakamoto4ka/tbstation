@@ -445,21 +445,32 @@
 	if(objectives.len)
 		report += printobjectives(objectives)
 		for(var/datum/objective/objective in objectives)
+			if(objective.objective_name == "Optional Objective")
+				continue
 			if(!objective.check_completion())
 				objectives_complete = FALSE
 				break
 
 	// Now list their vassals
-	if(vassals.len > 0)
+	if(vassals.len)
 		report += "<span class='header'>Their Vassals were...</span>"
-		for(var/datum/antagonist/vassal/all_vassals in vassals)
-			if(all_vassals.owner)
-				var/jobname = all_vassals.owner.assigned_role ? "the [all_vassals.owner.assigned_role.title]" : ""
-				report += "<b>[all_vassals.owner.name]</b> [jobname] was a [all_vassals.name]"
+		for(var/datum/antagonist/vassal/all_vassals as anything in vassals)
+			if(!all_vassals.owner)
+				continue
+			var/list/vassal_report = list()
+			vassal_report += "<b>[all_vassals.owner.name]</b>"
+
+			if(all_vassals.owner.assigned_role)
+				vassal_report += " the [all_vassals.owner.assigned_role.title]"
+			if(IS_FAVORITE_VASSAL(all_vassals.owner.current))
+				vassal_report += " and was the <b>Favorite Vassal</b>"
+			else if(IS_REVENGE_VASSAL(all_vassals.owner.current))
+				vassal_report += " and was the <b>Revenge Vassal</b>"
+			report += vassal_report.Join()
 
 	if(objectives.len == 0 || objectives_complete)
 		report += "<span class='greentext big'>The [name] was successful!</span>"
 	else
 		report += "<span class='redtext big'>The [name] has failed!</span>"
 
-	return report
+	return report.Join("<br>")
