@@ -87,6 +87,7 @@
 	attack_verb_simple = list("attack", "slash", "stab", "slice", "ripp", "dice", "cut")
 	hitsound = 'sound/weapons/rapierhit.ogg'
 	w_class = WEIGHT_CLASS_HUGE
+	sharpness = SHARP_EDGED
 	chaplain_spawnable = FALSE
 	var/obj/item/nullrod/dualsword/sheath //so the sheathe is refilled when the swords are dropped
 
