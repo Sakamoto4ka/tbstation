@@ -120,6 +120,7 @@
 		/datum/deathmatch_loadout/battler/janitor,
 		/datum/deathmatch_loadout/battler/enginer,
 		/datum/deathmatch_loadout/battler/scientist,
+		/datum/deathmatch_loadout/battler/bloodminer,
 		/datum/deathmatch_loadout/battler/surgeon,
 		/datum/deathmatch_loadout/battler/raider,
 		/datum/deathmatch_loadout/battler/clown,

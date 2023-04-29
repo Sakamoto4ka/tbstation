@@ -946,6 +946,14 @@
 	playsound(user ? user : src, 'sound/magic/clockwork/fellowship_armory.ogg', 35, TRUE, frequency = 90000 - (is_open * 30000))
 	return COMPONENT_NO_DEFAULT_MESSAGE
 
+/obj/item/melee/cleaving_saw/dash
+	force = 15
+/obj/item/melee/cleaving_saw/dash/proc/give_powers(mob/user)
+	var/mob/living/carbon/human/D = user
+	if(!istype(D))
+		return
+	D.dna.add_mutation(/datum/mutation/human/dash)
+
 //Legion: Staff of Storms
 
 /obj/item/storm_staff

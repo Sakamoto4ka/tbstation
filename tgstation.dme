@@ -1351,6 +1351,7 @@
 #include "code\datums\mutations\body.dm"
 #include "code\datums\mutations\chameleon.dm"
 #include "code\datums\mutations\cold.dm"
+#include "code\datums\mutations\dash.dm"
 #include "code\datums\mutations\fire_breath.dm"
 #include "code\datums\mutations\hulk.dm"
 #include "code\datums\mutations\olfaction.dm"

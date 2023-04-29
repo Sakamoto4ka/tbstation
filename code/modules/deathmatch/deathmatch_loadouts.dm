@@ -6,6 +6,7 @@
 	var/datum/outfit/outfit
 	var/datum/species/default_species
 	var/force_default = FALSE
+	var/list/add_mutations = list()
 	var/list/datum/species/blacklist = list(/datum/species/plasmaman)
 
 /datum/deathmatch_loadout/proc/pre_equip(mob/living/carbon/human/player)
@@ -336,5 +337,20 @@
 /datum/deathmatch_loadout/battler/scientist/pre_equip(mob/living/carbon/human/player)
 	player.equip_to_slot(new /obj/item/clothing/suit/armor/reactive/stealth, ITEM_SLOT_OCLOTHING)
 	player.equip_to_slot(new /obj/item/clothing/under/rank/rnd/scientist, ITEM_SLOT_ICLOTHING)
+	player.equip_to_slot(new /obj/item/clothing/mask/gas, ITEM_SLOT_MASK)
+	. = ..()
+
+/datum/deathmatch_loadout/battler/bloodminer
+	name = "Blood miner"
+	desc = "bloodshed"
+	default_species = /datum/species/human
+	equipment = list(
+		list(/obj/item/melee/cleaving_saw) = ITEM_SLOT_HANDS,
+		list(/obj/item/gun/energy/recharge/kinetic_accelerator) = ITEM_SLOT_HANDS
+	)
+/datum/deathmatch_loadout/battler/bloodminer/pre_equip(mob/living/carbon/human/player)
+	player.equip_to_slot(new /obj/item/clothing/suit/hooded/explorer, ITEM_SLOT_OCLOTHING)
+	player.equip_to_slot(new /obj/item/clothing/shoes/workboots/mining, ITEM_SLOT_FEET)
+	player.equip_to_slot(new /obj/item/clothing/under/rank/cargo/miner/lavaland, ITEM_SLOT_ICLOTHING)
 	player.equip_to_slot(new /obj/item/clothing/mask/gas, ITEM_SLOT_MASK)
 	. = ..()
