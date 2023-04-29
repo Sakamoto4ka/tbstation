@@ -305,15 +305,36 @@
 	desc = "Meet the enginer"
 	default_species = /datum/species/human
 	equipment = list(
-		/obj/item/fireaxe = ITEM_SLOT_HANDS,
-		/obj/item/storage/toolbox/emergency/turret = ITEM_SLOT_HANDS,
-		list(/obj/item/stack/sheet/iron/ten = 2) = ITEM_SLOT_BACKPACK,
-		list(/obj/item/stack/sheet/glass = 20) = ITEM_SLOT_BACKPACK
+		/obj/item/storage/toolbox/emergency/turret = ITEM_SLOT_HANDS
 	)
 /datum/deathmatch_loadout/battler/enginer/pre_equip(mob/living/carbon/human/player)
 	player.equip_to_slot(new /obj/item/clothing/under/rank/engineering/engineer, ITEM_SLOT_ICLOTHING)
 	player.equip_to_slot(new /obj/item/clothing/gloves/color/yellow, ITEM_SLOT_GLOVES)
 	player.equip_to_slot(new /obj/item/clothing/shoes/magboots, ITEM_SLOT_FEET)
 	player.equip_to_slot(new /obj/item/clothing/head/utility/hardhat, ITEM_SLOT_HEAD)
+	player.equip_to_slot(new /obj/item/fireaxe, ITEM_SLOT_BACK)
 	. = ..()
 
+/datum/deathmatch_loadout/battler/scientist
+	name = "Scientist"
+	desc = "What a nerd"
+	default_species = /datum/species/human
+	equipment = list(
+		list(/obj/item/reagent_containers/syringe) = ITEM_SLOT_HANDS,
+		list(/obj/item/reagent_containers/cup/beaker/plasma) = ITEM_SLOT_BACKPACK,
+		list(/obj/item/slimecross/burning/grey = 2) = ITEM_SLOT_BACKPACK,
+		list(/obj/item/slimecross/burning/adamantine) = ITEM_SLOT_BACKPACK,
+		list(/obj/item/slimecross/burning/sepia) = ITEM_SLOT_BACKPACK,
+		list(/obj/item/slimecross/chilling/orange) = ITEM_SLOT_BACKPACK,
+		list(/obj/item/slimecross/chilling/green) = ITEM_SLOT_BACKPACK,
+		list(/obj/item/slimecross/chilling/cerulean) = ITEM_SLOT_BACKPACK,
+		list(/obj/item/slimecross/industrial/oil) = ITEM_SLOT_BACKPACK,
+		list(/obj/item/slimecross/burning/rainbow) = ITEM_SLOT_BACKPACK,
+		list(/obj/item/slimecross/stabilized/sepia) = ITEM_SLOT_LPOCKET,
+		list(/obj/item/slimecross/stabilized/purple) = ITEM_SLOT_RPOCKET
+	)
+/datum/deathmatch_loadout/battler/scientist/pre_equip(mob/living/carbon/human/player)
+	player.equip_to_slot(new /obj/item/clothing/suit/armor/reactive/stealth, ITEM_SLOT_OCLOTHING)
+	player.equip_to_slot(new /obj/item/clothing/under/rank/rnd/scientist, ITEM_SLOT_ICLOTHING)
+	player.equip_to_slot(new /obj/item/clothing/mask/gas, ITEM_SLOT_MASK)
+	. = ..()

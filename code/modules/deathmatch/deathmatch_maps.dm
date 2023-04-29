@@ -102,7 +102,7 @@
 
 /datum/deathmatch_map/sniperelite
 	name = "Sniper Elite"
-	desc = "Agent 777... I don't know where we are"
+	desc = "Sound of gunfire and screeming people make my day"
 	min_players = 2
 	max_players = 8
 	allowed_loadouts = list(/datum/deathmatch_loadout/operative/sniper)
@@ -119,6 +119,7 @@
 		/datum/deathmatch_loadout/battler/northstar,
 		/datum/deathmatch_loadout/battler/janitor,
 		/datum/deathmatch_loadout/battler/enginer,
+		/datum/deathmatch_loadout/battler/scientist,
 		/datum/deathmatch_loadout/battler/surgeon,
 		/datum/deathmatch_loadout/battler/raider,
 		/datum/deathmatch_loadout/battler/clown,
