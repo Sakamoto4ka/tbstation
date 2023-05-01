@@ -90,6 +90,7 @@
 /obj/effect/turf_decal/tile/brown/fourcorners,
 /obj/item/mail/junkmail,
 /obj/item/ammo_casing/a357,
+/obj/item/reagent_containers/syringe/plasma,
 /turf/open/indestructible,
 /area/deathmatch)
 "dF" = (
@@ -765,6 +766,7 @@
 "Bt" = (
 /obj/effect/spawner/random/structure/closet_maintenance,
 /obj/item/reagent_containers/cup/glass/drinkingglass,
+/obj/item/reagent_containers/syringe/plasma,
 /turf/open/indestructible/plating,
 /area/deathmatch)
 "BC" = (
@@ -959,7 +961,7 @@
 "JF" = (
 /obj/structure/closet/crate/large,
 /obj/item/mail/junkmail,
-/obj/item/reagent_containers/cup/bottle/morphine,
+/obj/item/ammo_casing/shotgun/buckshot,
 /turf/open/indestructible/glass,
 /area/deathmatch)
 "Ke" = (
@@ -1372,13 +1374,6 @@
 /obj/effect/decal/cleanable/blood/tracks,
 /turf/open/indestructible/plating,
 /area/deathmatch)
-"YJ" = (
-/obj/effect/turf_decal/tile/blue/anticorner{
-	dir = 1
-	},
-/obj/item/reagent_containers/syringe/plasma,
-/turf/open/indestructible/whitelarge,
-/area/deathmatch)
 "YO" = (
 /obj/structure/table/glass,
 /obj/structure/table/glass,
@@ -1558,7 +1553,7 @@ IC
 ks
 Xk
 tl
-YJ
+Co
 sZ
 sZ
 Nv
