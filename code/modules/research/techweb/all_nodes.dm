@@ -127,6 +127,7 @@
 		"universal_scanner",
 		"voice_analyzer",
 		"watering_can",
+		"xenoa_labeler",
 	)
 
 /datum/techweb_node/mmi
@@ -622,6 +623,7 @@
 	design_ids = list(
 		"anomaly_neutralizer",
 		"reactive_armour",
+		"xenoa_gloves",
 	)
 	research_costs = list(TECHWEB_POINT_TYPE_GENERIC = 5000)
 
