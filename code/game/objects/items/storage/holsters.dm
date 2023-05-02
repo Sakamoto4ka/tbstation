@@ -32,24 +32,6 @@
 		/obj/item/gun/ballistic/rifle/boltaction, //fits if you make it an obrez
 		))
 
-/obj/item/storage/belt/holster/full/cowboy
-	name = "cowboy holster"
-	desc = "ee ha"
-
-/obj/item/storage/belt/holster/full/cowboy/Initialize(mapload)
-	. = ..()
-	atom_storage.max_slots = 2
-	atom_storage.set_holdable(list(
-		/obj/item/ammo_box/a357,
-		/obj/item/gun/ballistic/revolver/syndicate
-	))
-
-/obj/item/storage/belt/holster/full/cowboy/PopulateContents()
-	generate_items_inside(list(
-		/obj/item/ammo_box/a357 = 1,
-		/obj/item/gun/ballistic/revolver/syndicate = 1,
-	),src)
-
 /obj/item/storage/belt/holster/energy
 	name = "energy shoulder holsters"
 	desc = "A rather plain pair of shoulder holsters with a bit of insulated padding inside. Designed to hold energy weaponry."

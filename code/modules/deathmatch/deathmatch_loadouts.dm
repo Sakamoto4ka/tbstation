@@ -150,6 +150,10 @@
 	player.equip_to_slot(new /obj/item/clothing/shoes/combat, ITEM_SLOT_FEET)
 	player.equip_to_slot(new /obj/item/storage/backpack, ITEM_SLOT_BACK)
 
+///////////////////////////////////////////////////////////////////////
+//					Arena Station loadouts							//
+/////////////////////////////////////////////////////////////////////
+
 /datum/deathmatch_loadout/battler
 	name = "Battler"
 	desc = "What is a battler whith out weapone?."
@@ -183,26 +187,27 @@
 /datum/deathmatch_loadout/battler/druid
 	name = "Druid"
 	desc = "How this plants can help you?"
-	default_species = /datum/species/human
+	force_default = TRUE
+	default_species = /datum/species/pod
 	equipment = list(
-		list(/obj/item/reagent_containers/syringe/crude = 3) = ITEM_SLOT_BACKPACK,
-		list(/obj/item/food/grown/nettle/death) = ITEM_SLOT_BACKPACK,
-		list(/obj/item/food/grown/banana) = ITEM_SLOT_BACKPACK,
-		list(/obj/item/food/grown/cabbage) = ITEM_SLOT_BACKPACK,
-		list(/obj/item/food/grown/cherry_bomb) = ITEM_SLOT_BACKPACK,
-		list(/obj/item/food/grown/icepepper) = ITEM_SLOT_BACKPACK,
-		list(/obj/item/food/grown/berries/death) = ITEM_SLOT_BACKPACK,
-		list(/obj/item/food/grown/watermelon) = ITEM_SLOT_BACKPACK,
-		list(/obj/item/food/grown/carrot) = ITEM_SLOT_BACKPACK,
-		list(/obj/item/reagent_containers/cup/mortar) = ITEM_SLOT_LPOCKET,
-		list(/obj/item/pestle) = ITEM_SLOT_RPOCKET
+		/obj/item/gun/ballistic/bow = ITEM_SLOT_HANDS,
+		/obj/item/ammo_casing/caseless/arrow = ITEM_SLOT_HANDS,
+		list(/obj/item/ammo_casing/caseless/arrow) = ITEM_SLOT_BACKPACK,
+		list(/obj/item/food/grown/nettle/death/powerful = 2) = ITEM_SLOT_BACKPACK,
+		list(/obj/item/food/grown/banana = 2) = ITEM_SLOT_BACKPACK,
+		list(/obj/item/food/grown/cherry_bomb = 2) = ITEM_SLOT_BACKPACK,
+		list(/obj/item/food/grown/tomato/blood = 2) = ITEM_SLOT_BACKPACK,
+		list(/obj/item/food/grown/mushroom/walkingmushroom = 2) = ITEM_SLOT_BACKPACK,
+		list(/obj/item/seeds/kudzu) = ITEM_SLOT_BACKPACK,
+		/obj/item/knife/shiv/carrot = ITEM_SLOT_LPOCKET,
+		/obj/item/flashlight/lantern = ITEM_SLOT_RPOCKET
 	)
 
 /datum/deathmatch_loadout/battler/druid/pre_equip(mob/living/carbon/human/player)
 	player.equip_to_slot(new /obj/item/food/grown/ambrosia/gaia, ITEM_SLOT_HEAD)
 	player.equip_to_slot(new /obj/item/clothing/under/shorts/green, ITEM_SLOT_ICLOTHING)
 	player.equip_to_slot(new /obj/item/clothing/mask/gas/tiki_mask, ITEM_SLOT_MASK)
-	player.equip_to_slot(new /obj/item/gun/syringe/blowgun, ITEM_SLOT_BELT)
+	player.equip_to_slot(new /obj/item/clothing/glasses/thermal, ITEM_SLOT_EYES)
 	player.equip_to_slot(new /obj/item/clothing/neck/cloak/botancloak, ITEM_SLOT_NECK)
 	player.equip_to_slot(new /obj/item/clothing/gloves/botanic_leather, ITEM_SLOT_GLOVES)
 	player.equip_to_slot(new /obj/item/storage/backpack/santabag, ITEM_SLOT_BACK)
@@ -338,15 +343,16 @@
 		list(/obj/item/slimecross/burning/grey) = ITEM_SLOT_BACKPACK,
 		list(/obj/item/slimecross/burning/adamantine) = ITEM_SLOT_BACKPACK,
 		list(/obj/item/slimecross/burning/gold) = ITEM_SLOT_BACKPACK,
+		list(/obj/item/slimecross/burning/blue) = ITEM_SLOT_BACKPACK,
 		list(/obj/item/slimecross/burning/sepia) = ITEM_SLOT_BACKPACK,
 		list(/obj/item/slimecross/chilling/green) = ITEM_SLOT_BACKPACK,
 		list(/obj/item/slimecross/chilling/grey) = ITEM_SLOT_BACKPACK,
-		list(/obj/item/slimecross/chilling/rainbow) = ITEM_SLOT_BACKPACK,
 		list(/obj/item/slimecross/industrial/oil) = ITEM_SLOT_BACKPACK,
 		list(/obj/item/slimecross/charged/silver) = ITEM_SLOT_BACKPACK,
 		list(/obj/item/slimecross/charged/black) = ITEM_SLOT_BACKPACK,
 		list(/obj/item/slimecross/burning/rainbow) = ITEM_SLOT_BACKPACK,
 		list(/obj/item/slimecross/stabilized/sepia) = ITEM_SLOT_LPOCKET,
+		list(/obj/item/slimecross/chilling/adamantine) = ITEM_SLOT_BACKPACK,
 		list(/obj/item/slimecross/stabilized/purple) = ITEM_SLOT_RPOCKET
 	)
 /datum/deathmatch_loadout/battler/scientist/pre_equip(mob/living/carbon/human/player)
@@ -395,12 +401,15 @@
 	default_species = /datum/species/human
 	equipment = list(
 		list(/obj/item/clothing/mask/cigarette/cigar) = ITEM_SLOT_HANDS,
+		list(/obj/item/melee/curator_whip) = ITEM_SLOT_HANDS,
 		list(/obj/item/lighter) = ITEM_SLOT_LPOCKET
 	)
 /datum/deathmatch_loadout/battler/cowboy/pre_equip(mob/living/carbon/human/player)
 	player.equip_to_slot(new /obj/item/clothing/accessory/vest_sheriff, ITEM_SLOT_OCLOTHING)
 	player.equip_to_slot(new /obj/item/clothing/under/rank/security/detective, ITEM_SLOT_ICLOTHING)
 	player.equip_to_slot(new /obj/item/clothing/head/cowboy/brown, ITEM_SLOT_HEAD)
-	player.equip_to_slot(new /obj/item/storage/belt/holster/full/cowboy, ITEM_SLOT_BELT)
+	player.equip_to_slot(new /obj/item/storage/belt/holster/detective/full, ITEM_SLOT_BELT)
 	player.equip_to_slot(new /obj/item/clothing/shoes/cowboy, ITEM_SLOT_FEET)
 	. = ..()
+
+/////////////////////////////////////////////////////////////////////////////////////
