@@ -464,7 +464,7 @@ GLOBAL_LIST_EMPTY(bluespace_slime_crystals)
 	human_mob.mind.transfer_to(chosen_pet)
 
 /obj/structure/slime_crystal/gold/on_mob_leave(mob/living/affected_mob)
-	if(!istype(affected_mob,/mob/living/basic/pet))
+	if(!istype(affected_mob,/mob/living/basic/pet) && !istype(affected_mob,/mob/living/simple_animal/pet))
 		return
 
 	var/mob/living/carbon/human/human_mob = locate() in affected_mob

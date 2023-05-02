@@ -127,6 +127,7 @@
 		"universal_scanner",
 		"voice_analyzer",
 		"watering_can",
+		"xenoa_labeler",
 	)
 
 /datum/techweb_node/mmi
@@ -622,6 +623,7 @@
 	design_ids = list(
 		"anomaly_neutralizer",
 		"reactive_armour",
+		"xenoa_gloves",
 	)
 	research_costs = list(TECHWEB_POINT_TYPE_GENERIC = 5000)
 
@@ -1333,6 +1335,7 @@
 		"ci-thrusters",
 		"ci-nv",
 		"ci-xray",
+		"ci-nanite-heart",
 	)
 	research_costs = list(TECHWEB_POINT_TYPE_GENERIC = 2500)
 
@@ -1869,6 +1872,7 @@
 	prereq_ids = list("adv_mecha", "bluespace_power")
 	design_ids = list(
 		"mech_ccw_armor",
+		"mech_energy_relay",
 		"mech_proj_armor",
 	)
 	research_costs = list(TECHWEB_POINT_TYPE_GENERIC = 10000)
@@ -2352,6 +2356,7 @@
 		"coagulating_nanites",
 		"flesheating_nanites",
 		"poison_nanites",
+		"preserving_nanites",
 		"regenerative_nanites",
 		"sensor_crit_nanites",
 		"sensor_damage_nanites",
@@ -2371,7 +2376,6 @@
 		"brainheal_nanites",
 		"good_mood_nanites",
 		"nervous_nanites",
-		"paralyzing_nanites",
 		"selfscan_nanites",
 		"stun_nanites",
 	)
@@ -2401,10 +2405,10 @@
 	design_ids = list(
 		"aggressive_nanites",
 		"brainheal_plus_nanites",
-		"defib_nanites",
 		"fakedeath_nanites",
 		"purging_plus_nanites",
 		"regenerative_plus_nanites",
+		"adrenaline_nanites",
 	)
 	research_costs = list(TECHWEB_POINT_TYPE_GENERIC = 3000, TECHWEB_POINT_TYPE_NANITES = 3000)
 
