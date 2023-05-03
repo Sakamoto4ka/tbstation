@@ -843,7 +843,7 @@
 			var/datum/game_mode/dynamic/dynamic = SSticker.mode
 			var/list/pirate_rulesets = list(
 				/datum/dynamic_ruleset/midround/pirates,
-				/datum/dynamic_ruleset/midround/dangerous_pirates,
+				//datum/dynamic_ruleset/midround/dangerous_pirates, странно, но у нас их почему то нет
 			)
 			priority_announce(
 				"Attention crew: sector monitoring reports a massive jump-trace from an enemy vessel destined for your system. Prepare for imminent hostile contact.",
