@@ -232,6 +232,9 @@
 				var/power = M.powerlevel + rand(0,3)
 				Paralyze(power * 2 SECONDS)
 				set_stutter_if_lower(power * 2 SECONDS)
+				if(M.transformeffects & SLIME_EFFECT_ORANGE)
+					adjust_fire_stacks(2)
+					ignite_mob()
 				if (prob(stunprob) && M.powerlevel >= 8)
 					adjustFireLoss(M.powerlevel * rand(6,10))
 					updatehealth()
@@ -276,6 +279,13 @@
 	var/turf/target_shove_turf = get_step(target.loc, shove_dir)
 	var/shove_blocked = FALSE //Used to check if a shove is blocked so that if it is knockdown logic can be applied
 	var/turf/target_old_turf = target.loc
+
+	if(HAS_TRAIT(target,TRAIT_SHOVE_RESIST))
+		log_combat(src, target, "shoved")
+		target.adjustStaminaLoss(7)
+		target.visible_message("<span class='danger'>[name] tries to shove [target.name]</span>",
+							"<span class='userdanger'>You're nearly knocked down by [name]!</span>", "<span class='hear'>You hear aggressive shuffling!</span>", COMBAT_MESSAGE_RANGE, src)
+		return
 
 	//Are we hitting anything? or
 	if(SEND_SIGNAL(target_shove_turf, COMSIG_CARBON_DISARM_PRESHOVE) & COMSIG_CARBON_ACT_SOLID)

@@ -13,6 +13,10 @@
 /// Called when an organ is being regenerated with a new copy in species regenerate_organs (obj/item/organ/replacement)
 #define COMSIG_ORGAN_BEING_REPLACED "organ_being_replaced"
 
+#define COMSIG_MIAMI_CURED_DISORDER "miami_cured"
+#define COMSIG_MIAMI_START_SPREE "miami_start_spree"
+#define COMSIG_MIAMI_END_SPREE "miami_end_spree"
+
 ///from base of mob/update_transform()
 #define COMSIG_LIVING_POST_UPDATE_TRANSFORM "living_post_update_transform"
 
@@ -161,3 +165,16 @@
 
 /// From /obj/structure/geyser/attackby() : (obj/structure/geyser/geyser)
 #define COMSIG_LIVING_DISCOVERED_GEYSER "living_discovered_geyser"
+
+//MassMetaEdit start
+
+///from somewhere in door i dunno use the fucking search function
+#define COMSIG_LIVING_INTERACTED_WITH_DOOR "living_interacted_with_door"
+	#define DOOR_CLOSE "close"
+	#define DOOR_OPEN "open"
+
+#define COMSIG_MOB_RECEIVE_ARTIFACT "mob_receive_artifact"			//
+	#define COMPONENT_BLOCK_ARTIFACT 1
+	
+//MassMetaEdit end
+

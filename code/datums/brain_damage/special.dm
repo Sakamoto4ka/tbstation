@@ -47,6 +47,9 @@
 	playsound(get_turf(owner), 'sound/magic/clockwork/invoke_general.ogg', 200, TRUE, 5)
 	voice_of_god(message, owner, list("colossus","yell"), 2.5, include_owner, name)
 
+//MassMetaEditStart если что все вопросы к слееру
+/*
+
 /datum/brain_trauma/special/bluespace_prophet
 	name = "Bluespace Prophecy"
 	desc = "Patient can sense the bob and weave of bluespace around them, showing them passageways no one else can see."
@@ -147,6 +150,10 @@
 /obj/effect/client_image_holder/bluespace_stream/attack_tk(mob/user)
 	to_chat(user, span_warning("\The [src] actively rejects your mind, and the bluespace energies surrounding it disrupt your telekinesis!"))
 	return COMPONENT_CANCEL_ATTACK_CHAIN
+
+*/
+//MassMetaEditEnd если что все вопросы к слееру
+
 
 /datum/brain_trauma/special/quantum_alignment
 	name = "Quantum Alignment"

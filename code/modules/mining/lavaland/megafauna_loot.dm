@@ -365,6 +365,7 @@
 	throwforce = 17
 	armour_penetration = 50
 	sharpness = SHARP_EDGED
+	slot_flags = ITEM_SLOT_BACK
 	bare_wound_bonus = 10
 	layer = MOB_LAYER
 	resistance_flags = LAVA_PROOF | FIRE_PROOF | ACID_PROOF
@@ -967,7 +968,7 @@
 	var/max_thunder_charges = 3
 	var/thunder_charges = 3
 	var/thunder_charge_time = 15 SECONDS
-	var/static/list/excluded_areas = list(/area/space)
+	var/static/list/excluded_areas = list(/area/space, /area/reebe/city_of_cogs)
 	var/list/targeted_turfs = list()
 
 /obj/item/storm_staff/examine(mob/user)

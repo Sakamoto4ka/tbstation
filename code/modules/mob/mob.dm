@@ -5,7 +5,6 @@
  * * GLOB.mob_list
  * * GLOB.dead_mob_list
  * * GLOB.alive_mob_list
- * * GLOB.all_clockwork_mobs
  * * GLOB.mob_directory
  *
  * Unsets the focus var
@@ -948,6 +947,15 @@
 		is_magic_blocked = TRUE
 
 	return is_magic_blocked
+
+///Return any anti artifact atom on this mob
+/mob/proc/anti_artifact_check(self = FALSE)
+	var/list/protection_sources = list()
+	if(SEND_SIGNAL(src, COMSIG_MOB_RECEIVE_ARTIFACT, src, self, protection_sources) & COMPONENT_BLOCK_ARTIFACT)
+		if(protection_sources.len)
+			return pick(protection_sources)
+		else
+			return src
 
 /**
  * Buckle a living mob to this mob. Also turns you to face the other mob

@@ -596,6 +596,12 @@
 	required_reagents = list(/datum/reagent/consumable/liquidelectricity/enriched = 1, /datum/reagent/water = 5)
 	reaction_tags = REACTION_TAG_EASY | REACTION_TAG_CHEMICAL
 
+//salt electrolysis
+/datum/chemical_reaction/saltelectrolysis
+	results = list(/datum/reagent/chlorine = 2, /datum/reagent/sodium = 2)
+	required_reagents = list(/datum/reagent/consumable/liquidelectricity = 1, /datum/reagent/consumable/salt = 5)
+	reaction_tags = REACTION_TAG_EASY | REACTION_TAG_CHEMICAL
+
 //butterflium
 /datum/chemical_reaction/butterflium
 	required_reagents = list(/datum/reagent/colorful_reagent = 1, /datum/reagent/medicine/omnizine = 1, /datum/reagent/medicine/strange_reagent = 1, /datum/reagent/consumable/nutriment = 1)
@@ -951,3 +957,11 @@
 	for(var/i in rand(1, created_volume) to created_volume)
 		new /mob/living/simple_animal/hostile/ant(location)
 	..()
+
+/datum/chemical_reaction/naniteremover
+	results = list(/datum/reagent/toxin/naniteremover = 3)
+	required_reagents = list(/datum/reagent/stable_plasma = 1, /datum/reagent/toxin/acid = 1, /datum/reagent/ammonia = 1)
+	
+	optimal_ph_min = 3
+	optimal_ph_max = 12
+	reaction_tags = REACTION_TAG_EASY | REACTION_TAG_CHEMICAL

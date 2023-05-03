@@ -25,6 +25,7 @@ import './styles/themes/retro.scss';
 import './styles/themes/syndicate.scss';
 import './styles/themes/wizard.scss';
 import './styles/themes/admin.scss';
+import './styles/themes/clockwork.scss';
 
 import { StoreProvider, configureStore } from './store';
 

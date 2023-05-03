@@ -334,6 +334,7 @@ Remember to update _globalvars/traits.dm if you're adding/removing/renaming trai
 /// Allows the species to equip items that normally require a jumpsuit without having one equipped. Used by golems.
 #define TRAIT_NO_JUMPSUIT "no_jumpsuit"
 #define TRAIT_NAIVE "naive"
+#define TRAIT_MINDSWAPPED "mindswapped"
 /// always detect storms on icebox
 #define TRAIT_DETECT_STORM "detect_storm"
 #define TRAIT_PRIMITIVE "primitive"
@@ -361,10 +362,15 @@ Remember to update _globalvars/traits.dm if you're adding/removing/renaming trai
 #define TRAIT_PERMANENTLY_ONFIRE "permanently_onfire"
 /// Indicates if the mob is currently speaking with sign language
 #define TRAIT_SIGN_LANG "sign_language"
+#define TRAIT_ORGAN_PRESERVATION "organ_preservation" //Prevents organ decay while dead
+/// The mob's nanites are sending a monitoring signal visible on diag HUD
+#define TRAIT_NANITE_MONITORING "nanite_monitoring"
 /// This mob is able to use sign language over the radio.
 #define TRAIT_CAN_SIGN_ON_COMMS "can_sign_on_comms"
 /// nobody can use martial arts on this mob
 #define TRAIT_MARTIAL_ARTS_IMMUNE "martial_arts_immune"
+#define TRAIT_FAST_CLIMBER "fast_climber" //Used by implants
+#define TRAIT_SHOVE_RESIST "shove_resist" //Used by implants
 /// Immune to being afflicted by time stop (spell)
 #define TRAIT_TIME_STOP_IMMUNE "time_stop_immune"
 /// Revenants draining you only get a very small benefit.
@@ -379,6 +385,12 @@ Remember to update _globalvars/traits.dm if you're adding/removing/renaming trai
 #define TRAIT_BLOODY_MESS "bloody_mess"
 /// from coagulant reagents, this doesn't affect the bleeding itself but does affect the bleed warning messages
 #define TRAIT_COAGULATING "coagulating"
+// Your heart doesn't beat
+#define TRAIT_NOPULSE "nopulse"
+// Falsifies Health analyzer blood levels
+#define TRAIT_MASQUERADE "masquerade"
+// Your body is literal room temperature. Does not make you immune to the temp
+#define TRAIT_COLDBLOODED "coldblooded"
 /// From anti-convulsant medication against seizures.
 #define TRAIT_ANTICONVULSANT "anticonvulsant"
 /// The holder of this trait has antennae or whatever that hurt a ton when noogied
@@ -479,6 +491,7 @@ Remember to update _globalvars/traits.dm if you're adding/removing/renaming trai
 #define TRAIT_CULINARY_METABOLISM "culinary_metabolism"
 #define TRAIT_COMEDY_METABOLISM "comedy_metabolism"
 #define TRAIT_MEDICAL_METABOLISM "medical_metabolism"
+#define TRAIT_GREYTIDE_METABOLISM "greytide_metabolism"
 #define TRAIT_ENGINEER_METABOLISM "engineer_metabolism"
 #define TRAIT_ROYAL_METABOLISM "royal_metabolism"
 #define TRAIT_PRETENDER_ROYAL_METABOLISM "pretender_royal_metabolism"
@@ -839,6 +852,7 @@ Remember to update _globalvars/traits.dm if you're adding/removing/renaming trai
 #define EYES_COVERED "eyes_covered"
 #define NO_EYES "no_eyes"
 #define HYPNOCHAIR_TRAIT "hypnochair"
+#define NANITES_TRAIT "nanites"
 #define FLASHLIGHT_EYES "flashlight_eyes"
 #define IMPURE_OCULINE "impure_oculine"
 #define TRAIT_SANTA "santa"
@@ -865,6 +879,7 @@ Remember to update _globalvars/traits.dm if you're adding/removing/renaming trai
 #define LOCKED_HELMET_TRAIT "locked-helmet"
 #define NINJA_SUIT_TRAIT "ninja-suit"
 #define SLEEPING_CARP_TRAIT "sleeping_carp"
+#define ARMSTRONG_STYLE_TRAIT "armstrong_style"
 #define TIMESTOP_TRAIT "timestop"
 #define LIFECANDLE_TRAIT "lifecandle"
 #define VENTCRAWLING_TRAIT "ventcrawling"

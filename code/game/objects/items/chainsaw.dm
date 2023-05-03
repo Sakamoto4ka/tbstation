@@ -94,6 +94,81 @@
 		return TRUE
 	return FALSE
 
+/obj/item/chainsaw/syndicate_chainsaw
+	name = "syndicate ripper"
+	desc = "Terror and madness"
+	icon = 'massmeta/icons/obj/ripper.dmi'
+	icon_state = "ripper_off"
+	lefthand_file = 'massmeta/icons/mob/inhands/ripper_lefthand.dmi'
+	righthand_file = 'massmeta/icons/mob/inhands/ripper_righthand.dmi'
+	force_on = 34
+	armour_penetration = 100
+
+/obj/item/chainsaw/syndicate_chainsaw/attack_self(mob/user)
+	on = !on
+	to_chat(user, "As you pull the starting cord dangling from [src], [on ? "it begins to whirr." : "the chain stops moving."]")
+	force = on ? force_on : initial(force)
+	throwforce = on ? force_on : initial(force)
+	icon_state = "ripper_[on ? "on" : "off"]"
+	var/datum/component/butchering/butchering = src.GetComponent(/datum/component/butchering)
+	butchering.butchering_enabled = on
+
+	if(on)
+		hitsound = 'sound/weapons/chainsawhit.ogg'
+		chainsaw_loop.start()
+	else
+		hitsound = SFX_SWING_HIT
+		chainsaw_loop.stop()
+
+	toolspeed = on ? 0.5 : initial(toolspeed) //Turning it on halves the speed
+	if(src == user.get_active_held_item()) //update inhands
+		user.update_held_items()
+	update_item_action_buttons()
+
+/obj/item/chainsaw/syndicate_chainsaw/attack(mob/living/target, mob/living/user)
+	if(on)
+		. = ..()
+		target.Stun(0.5 SECONDS)
+		target.Knockdown(5 SECONDS)
+		target.emote("scream")
+	else
+		. = ..()
+
+/obj/item/chainsaw/syndicate_chainsaw/mounted_ripper
+	name = "mounted ripper"
+	desc = "A ripper that has replaced your arm."
+	inhand_icon_state = "mounted_chainsaw"
+	item_flags = ABSTRACT | DROPDEL
+	throwforce = 0
+	throw_range = 0
+	throw_speed = 0
+	toolspeed = 1
+
+/obj/item/chainsaw/syndicate_chainsaw/mounted_ripper/Initialize(mapload)
+	. = ..()
+	ADD_TRAIT(src, TRAIT_NODROP, HAND_REPLACEMENT_TRAIT)
+
+/obj/item/chainsaw/syndicate_chainsaw/mounted_ripper/Destroy()
+	var/obj/item/bodypart/part
+	new /obj/item/chainsaw/syndicate_chainsaw(get_turf(src))
+	if(iscarbon(loc))
+		var/mob/living/carbon/holder = loc
+		var/index = holder.get_held_index_of_item(src)
+		if(index)
+			part = holder.hand_bodyparts[index]
+	. = ..()
+	if(part)
+		part.drop_limb()
+
+/obj/item/chainsaw/syndicate_chainsaw/mounted_ripper/apply_components()
+	AddComponent(/datum/component/butchering, \
+		speed = 3 SECONDS, \
+		effectiveness = 100, \
+		bonus_modifier = 0, \
+		butcher_sound = 'sound/weapons/chainsawhit.ogg', \
+		disabled = TRUE, \
+	)
+
 /obj/item/chainsaw/mounted_chainsaw
 	name = "mounted chainsaw"
 	desc = "A chainsaw that has replaced your arm."

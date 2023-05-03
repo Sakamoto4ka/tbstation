@@ -17,6 +17,7 @@
 	vend_reply = "Thank you for using the SecDrobe!"
 	products = list(
 		/obj/item/clothing/suit/hooded/wintercoat/security = 3,
+		/obj/item/clothing/suit/hooded/wintercoat/security/fluffy = 3,
 		/obj/item/storage/backpack/security = 3,
 		/obj/item/storage/backpack/satchel/sec = 3,
 		/obj/item/storage/backpack/duffelbag/sec = 3,
@@ -438,8 +439,10 @@
 		/obj/item/clothing/suit/chaplainsuit/monkrobeeast = 1,
 		/obj/item/clothing/head/rasta = 1,
 		/obj/item/clothing/suit/chaplainsuit/shrinehand = 1,
+		/obj/item/clothing/head/hijab/white = 1,
+		/obj/item/clothing/head/hijab/turban/white = 1,
 		/obj/item/radio/headset/headset_srv = 2,
-	)
+		)
 	contraband = list(
 		/obj/item/toy/plush/ratplush = 1,
 		/obj/item/toy/plush/narplush = 1,

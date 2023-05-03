@@ -226,6 +226,7 @@ GLOBAL_LIST_INIT(uncommon_loot, list(//uncommon: useful items
 			/obj/item/reagent_containers/cup/glass/bottle/vodka = 1,
 			/obj/item/reagent_containers/cup/glass/drinkingglass/filled/nuka_cola = 1,
 			/obj/item/reagent_containers/cup/soda_cans/grey_bull = 1,
+			/obj/item/reagent_containers/cup/soda_cans/kvass = 1,
 			) = 1,
 		list(//sprayers
 			/obj/item/reagent_containers/spray = 1,
@@ -300,6 +301,7 @@ GLOBAL_LIST_INIT(rarity_loot, list(//rare: really good items
 		/obj/item/restraints/handcuffs = 1,
 		/obj/item/shield/buckler = 1,
 		/obj/item/throwing_star = 1,
+		/obj/item/xenoartifact/maint = 1,
 		/obj/item/weldingtool/hugetank = 1,
 		/obj/item/fishing_rod/master = 1,
 		) = 1,

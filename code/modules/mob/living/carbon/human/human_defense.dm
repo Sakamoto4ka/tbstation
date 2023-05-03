@@ -358,6 +358,9 @@
 		damage += rand(5, 10)
 		wound_mod = -90 // 35^1.4=145, 145-90=55
 
+	if(M.transformeffects & SLIME_EFFECT_RED)
+		damage *= 1.1
+
 	if(check_shields(M, damage, "the [M.name]"))
 		return FALSE
 
@@ -498,12 +501,17 @@
 				to_chat(src, span_notice("You feel your heart beating again!"))
 	electrocution_animation(40)
 
+#define EMP_BRUTE_DAMAGE 0
+#define EMP_BURN_DAMAGE_LIGHT 2
+#define EMP_BURN_DAMAGE_HEAVY 5
+
 /mob/living/carbon/human/emp_act(severity)
 	. = ..()
 	if(. & EMP_PROTECT_CONTENTS)
 		return
 	for(var/obj/item/bodypart/L as anything in src.bodyparts)
 		L.emp_act()
+
 
 /mob/living/carbon/human/acid_act(acidpwr, acid_volume, bodyzone_hit) //todo: update this to utilize check_obscured_slots() //and make sure it's check_obscured_slots(TRUE) to stop aciding through visors etc
 	var/list/damaged = list()

@@ -16,6 +16,12 @@
 #define ROLE_OPERATIVE "Operative"
 #define ROLE_TRAITOR "Traitor"
 #define ROLE_WIZARD "Wizard"
+//Massmeta edit - start
+#define ROLE_BLOODSUCKER "Bloodsucker"
+#define ROLE_INTERNAL_AFFAIRS "Internal Affairs Agent"
+#define ROLE_DARKSPAWN "darkspawn"
+#define ROLE_MONKEY "Monkey"
+#define ROLE_SERVANT_OF_RATVAR "Servant of Ratvar" //Massmeta edit end
 
 // Midround roles
 #define ROLE_ABDUCTOR "Abductor"
@@ -37,12 +43,15 @@
 #define ROLE_SPACE_DRAGON "Space Dragon"
 #define ROLE_SPIDER "Spider"
 #define ROLE_WIZARD_MIDROUND "Wizard (Midround)"
+#define ROLE_BLOODSUCKERBREAKOUT "Bloodsucker Breakout"
+#define ROLE_MONSTERHUNTER "Monster Hunter"
 
 // Latejoin roles
 #define ROLE_HERETIC_SMUGGLER "Heretic Smuggler"
 #define ROLE_PROVOCATEUR "Provocateur"
 #define ROLE_SYNDICATE_INFILTRATOR "Syndicate Infiltrator"
 #define ROLE_STOWAWAY_CHANGELING "Stowaway Changeling"
+#define ROLE_VAMPIRICACCIDENT "Vampiric Accident"
 
 // Other roles
 #define ROLE_SYNDICATE "Syndicate"
@@ -94,6 +103,7 @@
 #define ROLE_SPACE_BARTENDER "Space Bartender"
 #define ROLE_SPACE_BAR_PATRON "Space Bar Patron"
 #define ROLE_SKELETON "Skeleton"
+#define ROLE_XPERSON "Xperson"
 #define ROLE_ZOMBIE "Zombie"
 #define ROLE_MAINTENANCE_DRONE "Maintenance Drone"
 #define ROLE_BATTLECRUISER_CREW "Battlecruiser Crew"
@@ -116,6 +126,11 @@ GLOBAL_LIST_INIT(special_roles, list(
 	ROLE_REV_HEAD = 14,
 	ROLE_TRAITOR = 0,
 	ROLE_WIZARD = 14,
+	ROLE_BLOODSUCKER = 14, //Massmeta edit
+	ROLE_INTERNAL_AFFAIRS = 0, //Massmeta edit
+	ROLE_DARKSPAWN = 14, //Massmeta edit
+	ROLE_MONKEY = 0, //Massmeta edit
+	ROLE_SERVANT_OF_RATVAR = 14, //Massmeta edit
 
 	// Midround
 	ROLE_ABDUCTOR = 0,
@@ -137,12 +152,15 @@ GLOBAL_LIST_INIT(special_roles, list(
 	ROLE_SPACE_DRAGON = 0,
 	ROLE_SPIDER = 0,
 	ROLE_WIZARD_MIDROUND = 14,
+	ROLE_BLOODSUCKERBREAKOUT = 0,
+	ROLE_MONSTERHUNTER = 0,
 
 	// Latejoin
 	ROLE_HERETIC_SMUGGLER = 0,
 	ROLE_PROVOCATEUR = 14,
 	ROLE_SYNDICATE_INFILTRATOR = 0,
 	ROLE_STOWAWAY_CHANGELING = 0,
+	ROLE_VAMPIRICACCIDENT = 0,
 
 	// I'm not too sure why these are here, but they're not moving.
 	ROLE_PAI = 0,
