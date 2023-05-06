@@ -1,0 +1,5 @@
+author: "NotSoEpikName"
+delete-after: True
+changes:
+  - rscadd: "новая карта в ДМ"
+  - code_imp: "код что бы работала карта"
